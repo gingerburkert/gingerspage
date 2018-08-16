@@ -1,0 +1,1 @@
+folder images to remove, kept here only for backward compatibility.

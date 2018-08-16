@@ -1,0 +1,200 @@
+slug: column
+name: Column
+type: column
+visibility:
+  lg: true
+  md: true
+  sm: true
+  xs: true
+form:
+  general:
+    - name: center_text
+      type: switch
+      help: Position column conent in center.
+
+    - name: bg_image
+      label: Background Image
+      type: file-manager
+
+    - name: image_repeat
+      label: Image Repeat 
+      type: select
+      value: no-repeat
+      depends:
+        bg_image : '*'
+      options: 
+        no-repeat : No Repeat
+        repeat-x : Repeat X 
+        repeat-y : Repeat Y
+        repeat: Repeat All
+
+    - name: image_position
+      type: select
+      label: Image Position 
+      value: initial
+      depends:
+        bg_image : '*'
+      options:
+        initial: Default
+        center: Center
+        top left : Top Left 
+        top center : Top Center
+        top right: Top Right
+        center right: Center Right
+        center left: Center Left
+        bottom left: Bottom Left
+        bottom center: Bottom Center
+        bottom right: Bottom Right
+
+    - name : image_size
+      type : select
+      label : Image Size
+      value : initial
+      depends:
+        bg_image : '*'
+      options :
+        initial : Default
+        cover : Cover 
+        contain : Contain 
+
+    - name: bg_color
+      type: color
+      label: Background Color
+    
+    - name: custom_elements_flow
+      label: Custom Elements Flow
+      type: divider
+
+    - name: elements_flow
+      label: Custom Elements Flow
+      type: switch
+      help: Control the elements flow inside a column.
+
+    - name: elements_flow_grid
+      label: Define Grid
+      type: select
+      value: 2
+      options:
+        2: Two Column
+        3: Three Column
+        4: Four Column
+      depends:
+        elements_flow: true
+      help: Multipart elements with different column option
+
+    - name: elements_flow_full_grid
+      label: Full Width Element
+      help : Input the element number you want to be full width. Seperated by comma, eg : 1,4,7
+      depends:
+        elements_flow: true
+    
+    - name: element_style
+      type: divider
+
+    - name: margin
+      type: margin
+      label: Custom margin
+    
+    - name: padding
+      type: padding
+      label: Custom padding
+
+  styles :
+
+    - name: border
+      type: switch
+      label: Enable Border
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      suffix: px
+      value: 2
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      suffix: px
+      value: 3
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: border_hover_color
+      type: color
+      label: Border Hover Color
+      depends:
+        border: true
+        
+    - name : box_shadow
+      type : switch
+      label : Enable Box Shadow   
+
+    - name : box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true  
+
+    - name : box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        box_shadow : true     

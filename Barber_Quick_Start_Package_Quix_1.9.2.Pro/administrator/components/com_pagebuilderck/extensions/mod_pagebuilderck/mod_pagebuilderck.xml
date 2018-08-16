@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_pagebuilderck</name>
+	<creationDate>November 2015</creationDate>
+	<copyright>Copyright (C) 2015. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<author>Cedric Keiflin</author>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>2.2.1</version>
+	<description>MOD_PAGEBUILDERCK_XML_DESCRIPTION</description>
+
+	<files>
+		<filename module="mod_pagebuilderck">mod_pagebuilderck.php</filename>
+		<folder>elements</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_pagebuilderck.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_pagebuilderck.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_pagebuilderck.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_pagebuilderck.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="edition" label="MOD_PAGEBUILDERCK_EDITION_FIELDSET_LABEL" addfieldpath="/modules/mod_pagebuilderck/elements">
+				<field
+					name="pagedition"
+					type="pagebuilderck"
+					label=""
+					description=""
+					filter="raw"
+					/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="preparecontent"
+					type="radio"
+					label="COM_PAGEBUILDERCK_CONTENT_PREPARE"
+					description=""
+					default="0"
+					class="btn-group"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

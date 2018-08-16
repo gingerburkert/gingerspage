@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>System - Pagebuilder CK</name>
+	<author>Cédric KEIFLIN</author>
+	<creationDate>August 2015</creationDate>
+	<copyright>Cédric KEIFLIN</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>2.2.3</version>
+	<description>System - Pagebuilder CK. Needed to render the pages and add some features</description>
+	
+	<files>
+		<filename plugin="pagebuilderck">pagebuilderck.php</filename>
+		<folder>params</folder>
+	</files>
+</extension>

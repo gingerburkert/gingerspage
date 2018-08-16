@@ -1,0 +1,149 @@
+name: Number Counter
+slug: number-counter
+groups: interactive
+
+form:
+  general:
+    - name: title
+      type: text
+      help: Input a title for the counter.
+      value: Animated Number
+
+    - name: number 
+      type: text
+      help: Define a number for the counter 
+      value: 1000
+
+    - name: icon_enabled
+      type: switch
+      label: Use Icon
+      help: Here you can choose whether icon set below should be used.
+
+    - name: icon
+      type: icon
+      depends:
+        icon_enabled: true
+
+    - name: image
+      type: file-manager
+      depends:
+        icon_enabled: false
+
+    - name: image_alt_text
+      type: text
+      label: Image Alt Text
+      help: Define the HTML ALT text for your image here.
+      depends:
+        icon_enabled: false
+
+    - name: alignment
+      type: select
+      value: center
+      label: Text Alignment
+      image: true 
+      responsive: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+  styles:
+    - name: title_styles
+      type: divider
+
+    - name: title_font
+      type: typography
+      label: Font
+
+    - name: title_color
+      type: color 
+      label: Color
+
+    - name: number_style
+      type: divider
+
+    - name: number_font
+      type: typography
+      label: Font    
+
+    - name: number_color
+      type: color
+      label: Color
+
+    - name: icon_style
+      type: divider
+
+    - name: icon_font_size
+      type: slider
+      lable: Icon Font Size
+      value : 80
+      max: 200
+      suffix: px
+      responsive: true
+      depends:
+        icon_enabled: true
+
+    - name: icon_color
+      type: color
+      label: Icon Color 
+      depends:
+        icon_enabled: true
+
+    - name: element_style
+      type: divider 
+
+    - name: bg_image
+      type: file-manager
+      label: Background Image
+
+    - name: image_repeat
+      label: Image Repeat 
+      type: select
+      value: no-repeat
+      depends:
+        bg_image : '*'
+      options: 
+        no-repeat : No Repeat
+        repeat-x : Repeat X 
+        repeat-y : Repeat Y
+        repeat: Repeat All
+
+    - name: image_position
+      type: select
+      label: Image Position 
+      value: initial
+      depends:
+        bg_image : '*'
+      options:
+        initial: Default
+        center: Center
+        top left : Top Left 
+        top center : Top Center
+        top right: Top Right
+        center right: Center Right
+        center left: Center Left
+        bottom left: Bottom Left
+        bottom center: Bottom Center
+        bottom right: Bottom Right
+
+    - name : image_size
+      type : select
+      label : Image Size
+      value : initial
+      depends:
+        bg_image : '*'
+      options :
+        initial : Default
+        cover : Cover 
+        contain : Contain 
+
+    - name: bg_color
+      type: color
+      label: Background Color
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+

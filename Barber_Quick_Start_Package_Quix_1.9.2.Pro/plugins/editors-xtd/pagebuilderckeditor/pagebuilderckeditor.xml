@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Editor - Pagebuilder CK</name>
+	<author>Cédric KEIFLIN</author>
+	<creationDate>Februar 2016</creationDate>
+	<copyright>Cédric KEIFLIN</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>2.2.0</version>
+	<description>Editor - Add a button to switch between the native editor and Page Builder CK</description>
+	<files>
+		<filename plugin="pagebuilderckeditor">pagebuilderckeditor.php</filename>
+	</files>
+</extension>

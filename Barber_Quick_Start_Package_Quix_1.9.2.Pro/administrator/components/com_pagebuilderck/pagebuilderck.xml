@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_pagebuilderck</name>
+	<creationDate>April 2015</creationDate>
+	<copyright>Copyright (C) 2015. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<author>Cedric Keiflin</author>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>2.2.6</version>
+	<description>CK_PAGEBUILDERCK_DESC</description>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<scriptfile>install.pagebuilderck.php</scriptfile>
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>pagebuilderck.php</filename>
+		<filename>router.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>fonts</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_pagebuilderck.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.com_pagebuilderck.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_pagebuilderck.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_pagebuilderck.sys.ini</language>
+	</languages>
+	<media folder="media" destination="com_pagebuilderck">
+		<folder>assets</folder>
+		<folder>compiled</folder>
+		<folder>images</folder>
+	</media>
+	<administration>
+		<menu>COM_PAGEBUILDERCK</menu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>pagebuilderck.php</filename>
+			<folder>backup</folder>
+			<folder>controllers</folder>
+			<folder>extensions</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="administrator">
+			<language tag="en-GB">language/en-GB/en-GB.com_pagebuilderck.sys.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_pagebuilderck.sys.ini</language>
+		</languages>
+	</administration>
+	<updateservers>
+		<server type="extension" priority="1" name="Page Builder CK Update">http://update.joomlack.fr/com_pagebuilderck_update.xml</server>
+	</updateservers>
+</extension>

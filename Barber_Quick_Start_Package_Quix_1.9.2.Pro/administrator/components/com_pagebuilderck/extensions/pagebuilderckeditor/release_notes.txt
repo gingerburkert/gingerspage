@@ -1,0 +1,20 @@
+VERSION 2.2.0 - 03/03/18
+- Add compatibility with elements from version 2.2.0
+
+VERSION 2.0.1 - 23/11/17
+- Fix issue with Flexicontent (hide the textarea field with code)
+
+VERSION 1.0.5 - 04/05/17
+- Fix issue with editor since Joomla! 3.7
+
+VERSION 1.0.4 - 28/10/16
+- Fix issue with IE11 
+
+VERSION 1.0.3 - 12/10/16
+- Fix issue with selected editor from the website configuration 
+
+VERSION 1.0.2 - 12/04/16
+- Fix issue with Tinymce editor not loaded in the article edition, in backend and frontend
+
+VERSION 1.0.1 - 11/04/16
+- Fix issue with frontend edition, editor did not stay after article save

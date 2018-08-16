@@ -1,0 +1,129 @@
+name: Block Number
+slug: block-number
+groups: content
+form:
+  general:
+    - name: heading
+      type: text
+      value: Lorem ipsum dolor sit amet timeam
+      help: Block title. Leave blank if not required.
+
+    - name: content
+      type: textarea
+      value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+      help: Block content that display after the title and next to the number.
+
+    - name: block_number
+      type: text
+      value: '01'
+      help: You can enter number with any. Eg - 01 or 99+
+
+    - name: block_size
+      type: slider
+      max: 200
+      suffix: px 
+      value: 48
+      help: Set the number block size (width & height).
+      responsive: true
+
+    - name: alignment
+      type: select
+      value: left
+      label: Alignment
+      options:
+        left: Left
+        center: Center
+        right: Right
+      image: true
+      responsive: true
+
+  styles:
+    - name: number 
+      type: divider
+      label : Number Block Style 
+
+    - name: number_font
+      type: typography
+      label : Font
+
+    - name: block_bg_color
+      type: color
+      label: Background Color
+
+    - name: block_color
+      type: color
+      label: Text Color
+
+    - name: border
+      type: switch
+      label: Border
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      suffix: px
+      value: 2
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      suffix: px
+      value: 3
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: numbe_margin
+      type: margin 
+      label: Margin
+
+    - name: number 
+      type: divider
+      label : Text Style 
+
+    - name: title_font
+      type: typography
+      label: Title Font 
+
+    - name: title_color
+      type: color
+
+    - name: font
+      type: typography
+      label: Content Font
+
+    - name: color
+      type: color
+      label: Content Color 
+
+    - name: element
+      type: divider
+      label: Element Style - Apply On Element Body
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

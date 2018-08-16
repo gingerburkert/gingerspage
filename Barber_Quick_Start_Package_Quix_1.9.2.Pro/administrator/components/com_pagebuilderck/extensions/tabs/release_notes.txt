@@ -1,0 +1,5 @@
+VERSION 1.0.1 - 14/05/18
+- Fix issue with image edition
+
+VERSION 1.0.0 - 16/01/18
+- First issue as separate plugin

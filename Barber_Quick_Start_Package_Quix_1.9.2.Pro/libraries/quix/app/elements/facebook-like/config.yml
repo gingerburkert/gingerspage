@@ -1,0 +1,36 @@
+name: Facebook Like
+slug: facebook-like
+groups: social
+form:
+  general:
+    - name: fb_app_id
+      type: text
+      label: Facebook App ID
+      help: Optional - Create your App ID by following this url https://developers.facebook.com/apps and enter it here.
+
+    - name: layout
+      type: select
+      value: standard
+      options:
+       standard: Standard
+       button_count: Button Count
+       button: Button
+       box_count: Box Count
+
+    - name: alignment
+      type: select
+      value: left
+      label: Text Alignment
+      image: true
+      responsive: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+  styles:
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

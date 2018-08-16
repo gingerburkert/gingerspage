@@ -1,0 +1,13 @@
+name: Contact Form
+slug: contact-form
+groups: [content, interactive] 
+form:
+  general:
+    - name: email
+      type: text
+      
+    - name: captcha_enabled
+      type: switch
+      value: false
+      help: if you enable captcha, please configuring & enable capthca plugin and select it from global configuration.
+    

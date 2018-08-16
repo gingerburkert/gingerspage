@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset
+        name="quix"
+        label="JGLOBAL_QUIX"
+        description="COM_QUIX_CONFIG_QUIX_SETTINGS_DESC">
+
+        <field
+            name="dev_mode" type="radio"
+            label="COM_QUIX_CONFIG_DEV_MOOD_LABEL"
+            description="COM_QUIX_CONFIG_DEV_MOOD_DESC"
+            class="btn-group"
+            default="0"
+            >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field
+            name="api_https" type="radio"
+            label="COM_QUIX_CONFIG_API_HTTPS_LABEL"
+            description="COM_QUIX_CONFIG_API_HTTPS_DESC"
+            class="btn-group"
+            default="1"
+            >
+            <option value="0">HTTP</option>
+            <option value="1">HTTPS</option>
+        </field>
+        
+        <field
+            name="load_fontawosome" type="radio"
+            label="COM_QUIX_CONFIG_LOAD_FONTAWOSOME_LABEL"
+            description="COM_QUIX_CONFIG_LOAD_FONTAWOSOME_DESC"
+            class="btn-group"
+            default="1"
+            >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        
+        <field
+            name="safemode" type="radio"
+            label="COM_QUIX_CONFIG_SAFEMODE_LABEL"
+            description="COM_QUIX_CONFIG_SAFEMODE_DESC"
+            class="btn-group"
+            default="0"
+            >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        
+        <field
+            name="generator_meta" type="radio"
+            label="COM_QUIX_CONFIG_GENERATOR_META_LABEL"
+            description="COM_QUIX_CONFIG_GENERATOR_META_DESC"
+            class="btn-group"
+            default="1"
+            >
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+
+
+        <!-- hidden items -->
+        <field name="enable_com_content" type="hidden" />
+        <field name="enable_mod_custom" type="hidden" />
+        <field name="enable_com_k2" type="hidden" />
+        <field name="enable_com_easyblog" type="hidden" />
+        <field name="enable_com_digicom" type="hidden" />
+        <field name="enable_com_virtuemart" type="hidden" />
+        <field name="enable_com_judirectory" type="hidden" />
+        <field name="enable_com_zoo" type="hidden" />
+        <field name="enable_com_hikashop" type="hidden" />
+        <field name="enable_com_j2store" type="hidden" />
+        <field name="enable_custom_context" type="hidden" />
+        <field name="custom_context" type="hidden" />
+        
+
+        
+    </fieldset>
+    
+    <fieldset
+        name="permissions"
+        description="JCONFIG_PERMISSIONS_DESC"
+        label="JCONFIG_PERMISSIONS_LABEL">
+
+        <field
+            name="rules" type="rules" component="com_quix"
+            class="inputbox" filter="rules" validate="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            section="component" 
+        />
+    </fieldset>
+</config>

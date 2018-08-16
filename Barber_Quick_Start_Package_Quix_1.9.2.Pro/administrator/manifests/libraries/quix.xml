@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" version="3.0" method="upgrade">
+    <name>Quix Builder</name>
+    <libraryname>quix</libraryname>
+    <creationDate>2017-07-16</creationDate>
+    <packager>ThemeXpert</packager>
+    <copyright>(C) 2010 - 2015 ThemeXpert. All rights reserved.</copyright>
+    <packageremail>info@themexpert.com</packageremail>
+    <packagerurl>www.themexpert.com</packagerurl>
+    <author>ThemeXpert</author>
+    <authorEmail>info@themexpert.com</authorEmail>
+    <authorUrl>www.themexpert.com</authorUrl>
+    <version>1.9.2</version>
+    <license>GNU General Public License version 3 or later;</license>
+    <description>PKG_QUIX_XML_DESCRIPTION</description>
+
+    <files>
+        <folder>app</folder>
+        <folder>assets</folder>
+        <folder>src</folder>
+        <folder>vendor</folder>
+    </files>
+</extension>

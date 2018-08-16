@@ -1,0 +1,236 @@
+slug: row
+name: Row
+type: row
+visibility:
+  lg: true
+  md: true
+  sm: true
+  xs: true
+form:
+  general:
+    - name: container
+      type: switch
+      label: Add Container
+      help: Toggle between box and fluid layout. Add container class on box mode.
+
+    - name: equal_column
+      type: switch
+      label: Equalize Column Heights
+
+    - name: reverse_columns
+      type: switch
+      label: Reverse Columns 
+      help: Reverse column order - When on mobile, the column order is reversed, so the last column appears on top and vice versa.
+
+    - name: background_image
+      type: divider
+
+    - name: bg_image
+      label: Background Image
+      type: file-manager
+
+    - name: image_repeat
+      label: Image Repeat 
+      type: select
+      value: no-repeat
+      depends:
+        bg_image : '*'
+      options: 
+        no-repeat : No Repeat
+        repeat-x : Repeat X 
+        repeat-y : Repeat Y
+        repeat: Repeat All
+
+    - name: image_position
+      type: select
+      label: Image Position 
+      value: initial
+      depends:
+        bg_image : '*'
+      options:
+        initial: Default
+        center: Center
+        top left : Top Left 
+        top center : Top Center
+        top right: Top Right
+        center right: Center Right
+        center left: Center Left
+        bottom left: Bottom Left
+        bottom center: Bottom Center
+        bottom right: Bottom Right
+
+    - name : image_size
+      type : select
+      label : Image Size
+      value : initial
+      depends:
+        bg_image : '*'
+      options :
+        initial : Default
+        cover : Cover 
+        contain : Contain
+
+    - name: bg_color
+      type: color
+      label: Background Color
+
+    - name : bg_overlay
+      type : switch
+      label : Backgroung Overlay
+      help : Use background color as image overlay
+      depends :
+        bg_image : '*'
+
+    - name: parallax_styles
+      type: divider
+      label: Parallax
+
+    - name: bg_parallax
+      type: switch
+      label: Parallax Effect
+
+    - name: parallax_x
+      label: Horizontal
+      help: Animate a background image (x-axis).
+      type: slider
+      min: -400
+      max: 400
+      step: 10
+      depends :
+        bg_parallax : true
+    
+    - name: parallax_y
+      label: Vertical
+      help: Animate a background image (y-axis).
+      type: slider
+      min: -400
+      max: 400
+      step: 10
+      value: -250
+      depends :
+        bg_parallax : true
+        
+    - name: parallax_breakpoint
+      label: Breakpoint
+      help: Display the parallax effect only on this device width and larger.
+      type : select
+      options:
+        0     : Always
+        640   : Small(Phone)
+        960   : Medium(Tablet)
+        1200   : Large(Desktop)
+        1600  : X-Large(Large Screens)
+      depends :
+        bg_parallax : true
+
+    - name: element_style
+      type: divider
+      label: Common Style 
+
+    - name: margin
+      type: margin
+      label: Custom margin
+
+    - name: padding
+      type: padding
+      label: Custom padding
+
+  styles :
+
+    - name: border
+      type: switch
+      label: Enable Border
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      suffix: px
+      value: 2
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      suffix: px
+      value: 3
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: border_hover_color
+      type: color
+      label: Border Hover Color
+      depends:
+        border: true
+
+    - name : box_shadow
+      type : switch
+      label : Enable Box Shadow   
+
+    - name : box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true  
+
+    - name : box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        box_shadow : true   

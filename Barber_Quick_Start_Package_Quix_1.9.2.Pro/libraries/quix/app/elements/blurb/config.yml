@@ -1,0 +1,337 @@
+name: Blurb
+slug: blurb
+groups: content
+form:
+  general:
+    - name: title
+      type: text
+      value: Welcome to Quix
+
+    - name: title_tag
+      type: select
+      label: Title Tag
+      value: h3
+      options:
+        h1: H1
+        h2: H2
+        h3: H3
+        h4: H4
+        h5: H5
+        h6: H6
+        div: DIV
+
+    - name: link_sep
+      type: divider
+      label: Link 
+
+    - name : link
+      type : link
+      value :
+        url:
+        target:
+      help : Add link to any blurb element.
+
+    - name: link_type
+      type: select
+      label: Link Apply 
+      value: only_title
+      help: Select where the link will apply.
+      options:
+        only_title: On Title
+        only_image: Image/Icon
+        image_title: Title & Image
+        full_section: Full Body
+
+    - name: media_sep
+      type: divider
+      label: Media 
+      
+    - name: icon_enabled
+      type: switch
+      label: Use Icon
+      help: Here you can choose whether icon set below should be used.
+
+    - name: icon
+      type: icon
+      depends:
+        icon_enabled: true
+
+    - name: image
+      type: file-manager
+      depends:
+        icon_enabled: false
+
+    - name: image_alt_text
+      type: text
+      label: Image Alt Text
+      help: Define the HTML ALT text for your image here.
+      depends:
+        icon_enabled: false
+
+    - name: placement
+      type: select
+      label: Image/Icon Placement
+      value: beforeTitle
+      options:
+        beforeTitle: Before Title
+        afterTitle: After Title
+        left: Left
+        right: Right
+
+    - name: content_sep
+      type: divider
+      label: Content 
+      
+    - name: alignment
+      type: select
+      label: Content Alignment
+      value: center
+      responsive: true
+      image: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+    - name: content
+      type: editor
+      value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+  styles:
+    - name : title_styles
+      type : divider
+      label: Title Style
+
+    - name: header_font
+      type: typography
+      label: Font
+
+    - name: header_color
+      type: color
+      label: Text Color
+
+    - name: header_hover_color
+      type: color
+      label: Hover Text Color
+
+    - name: header_margin
+      type: margin
+      label: Margin
+
+    - name : content_styles
+      type : divider
+      label: Content Style
+
+    - name: body_font
+      type: typography
+      label: Font
+
+    - name: body_color
+      type: color
+      label: Text Color
+
+    - name : media_style
+      type : divider
+      label: Media Style 
+
+    - name: media_margin
+      type: margin
+      label: Margin
+
+    - name : icon_styles
+      type : divider
+      label: Icon Style
+      depends:
+        icon_enabled: true
+
+    - name: icon_font_size
+      type: slider
+      lable: Icon Font Size
+      suffix: px
+      value : 80
+      depends:
+        icon_enabled: true
+      responsive: true
+
+    - name: icon_color
+      type: color
+      label: Icon Color
+      depends:
+        icon_enabled: true
+
+    - name : blurb_styles
+      type : divider
+      label: Body Style
+
+    - name: bg_image
+      type: file-manager
+      label: Background Image
+      
+    - name: bg_color
+      type: color
+      label: Background Color
+
+    - name: bg_hover_color
+      type: color
+      label: Hover Background
+
+    - name: image_repeat
+      label: Image Repeat
+      type: select
+      value: no-repeat
+      depends:
+        bg_image : '*'
+      options:
+        no-repeat : No Repeat
+        repeat-x : Repeat X
+        repeat-y : Repeat Y
+        repeat: Repeat All
+
+    - name: image_position
+      type: select
+      label: Image Position
+      value: initial
+      depends:
+        bg_image : '*'
+      options:
+        initial: Default
+        center: Center
+        top left : Top Left
+        top center : Top Center
+        top right: Top Right
+        center right: Center Right
+        center left: Center Left
+        bottom left: Bottom Left
+        bottom center: Bottom Center
+        bottom right: Bottom Right
+
+    - name : image_size
+      type : select
+      label : Image Size
+      value : initial
+      depends:
+        bg_image : '*'
+      options :
+        initial : Default
+        cover : Cover
+        contain : Contain
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+
+    - name : border_boxshadow
+      type: divider
+      label: Border & Box Shadow - Apply on Body
+
+    - name: border
+      type: switch
+      label: Enable Border
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      suffix: px
+      value: 2
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      suffix: px
+      value: 3
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: border_hover_color
+      type: color
+      label: Border Hover Color
+      depends:
+        border: true
+
+    - name : box_shadow
+      type : switch
+      label : Enable Box Shadow   
+
+    - name : box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true  
+
+    - name : box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        box_shadow : true     
+
+  animation:
+
+    - name  : animation_apply
+      type  : select
+      label : Animation Apply 
+      value : 0
+      options: 
+        0 : None
+        body: Blurb Body 
+        media : Blurb Image/Icon 
+        title : Blurb Title 

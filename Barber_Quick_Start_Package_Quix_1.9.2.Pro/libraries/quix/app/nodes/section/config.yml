@@ -1,0 +1,359 @@
+slug: section
+name: Section
+type: section
+visibility:
+  lg: true
+  md: true
+  sm: true
+  xs: true
+form:
+  general:
+    - name : stretch_mode
+      type : switch
+      label: Stretch Mode
+      help: Stretch section to match window width.
+
+    - name: container
+      type: switch
+      label: Add Container 
+      help: Toggle between box and fluid layout. Add container class on box mode.
+
+    - name: background_image
+      type: divider
+
+    - name: bg_image
+      label: Image
+      type: file-manager
+
+    - name: image_repeat
+      label: Image Repeat
+      type: select
+      value: no-repeat
+      depends:
+        bg_image : '*'
+      options:
+        no-repeat : No Repeat
+        repeat-x : Repeat X
+        repeat-y : Repeat Y
+        repeat: Repeat All
+
+    - name: image_position
+      type: select
+      label: Image Position
+      value: initial
+      depends:
+        bg_image : '*'
+      options:
+        initial: Default
+        center: Center
+        top left : Top Left
+        top center : Top Center
+        top right: Top Right
+        center right: Center Right
+        center left: Center Left
+        bottom left: Bottom Left
+        bottom center: Bottom Center
+        bottom right: Bottom Right
+
+    - name : image_size
+      type : select
+      label : Image Size
+      value : initial
+      depends:
+        bg_image : '*'
+      options :
+        initial : Default
+        cover : Cover
+        contain : Contain
+
+    - name: bg_color
+      type: color
+      label: Background Color
+
+    - name : bg_overlay
+      type : switch
+      label : Backgroung Overlay
+      help : Use background color as image overlay
+      depends :
+        bg_image : '*'
+
+    - name: parallax_styles
+      type: divider
+      label: Parallax
+
+    - name: bg_parallax
+      type: switch
+      label: Parallax Effect
+       
+    - name: parallax_x
+      label: Horizontal
+      help: Animate a background image (x-axis).
+      type: slider
+      min: -400
+      max: 400
+      step: 10
+      depends :
+        bg_parallax : true
+    
+    - name: parallax_y
+      label: Vertical
+      help: Animate a background image (y-axis).
+      type: slider
+      min: -400
+      max: 400
+      step: 10
+      value: -250
+      depends :
+        bg_parallax : true
+        
+    - name: parallax_breakpoint
+      label: Breakpoint
+      help: Display the parallax effect only on this device width and larger.
+      type : select
+      options:
+        0     : Always
+        640   : Small(Phone)
+        960   : Medium(Tablet)
+        1200   : Large(Desktop)
+        1600  : X-Large(Large Screens)
+      depends :
+        bg_parallax : true
+
+    - name: video_bg
+      type: divider
+      label: Video Background
+
+    - name: enable_video_bg
+      type: switch
+      label: Enable Video BG
+
+    - name: video_poster
+      type: file-manager
+      label: Poster
+      depends :
+        enable_video_bg : true
+    
+    - name: video_mp4
+      type: file-manager
+      label: Video MP4
+      depends :
+        enable_video_bg : true
+    
+    - name: video_webm
+      type: file-manager
+      label: Video WEBM
+      depends :
+        enable_video_bg : true
+    
+    - name: video_ogg
+      type: file-manager
+      label: Video OGG
+      depends :
+        enable_video_bg : true
+
+    - name: element_style
+      type: divider
+      label: Common Style 
+
+    - name : padding 
+      type : padding   
+
+  styles :
+    - name: top_shape
+      type: divider
+      label: Top Shape
+
+    - name: enable_top_shape
+      type: switch
+      label: Enable Shape
+
+    - name: top_shape_type
+      type: select
+      label: Type
+      depends: enable_top_shape
+      value: mountains
+      options: 
+        qx-tilt-opacity: Tilt Opacity
+        qx-waves-shake: Waves Shake
+        qx-triangle-wave: Triangle Wave
+        qx-triangle-dobule-wave: Triangle Dobule Wave
+        arrow: Arrow
+        book: Book
+        clouds: Clouds
+        curve-asymmetrical: Curve Asymmetrical
+        curve: Curve
+        drops: Drops
+        mountains: Mountains
+        opacity-fan: Fan Opacity
+        opacity-tilt: Tilt Opacity
+        pyramids: Pyramids
+        split: Split
+        tilt: Tilt
+        triangle-asymmetrical: Triangle Asymmetrical
+        triangle: Triangle
+        wave-brush: Waves Brush
+        waves-pattern: Waves Pattern
+        waves: Waves
+        zigzag: Zigzag
+
+    - name: top_shape_color
+      type: color
+      label: Color
+      depends: enable_top_shape
+
+    - name: top_shape_width
+      type: slider
+      label: Width
+      value: 100
+      min: 100
+      max: 500
+      depends: enable_top_shape
+
+    - name: top_shape_height
+      type: slider
+      label: Height
+      value: 100
+      max: 700
+      depends: enable_top_shape
+
+    - name: top_shape_flip
+      type: switch
+      label: Flip
+      depends: enable_top_shape
+
+    # - name: top_shape_invert
+    #   type: switch
+    #   label: Invert
+    #   depends: enable_top_shape
+
+    - name: top_shape_bring_front
+      type: switch
+      label: Bring to Front
+      depends: enable_top_shape
+        
+    - name: bottom_shape
+      type: divider
+      label: Bottom Shape
+
+    - name: enable_bottom_shape
+      type: switch
+      label: Enable Shape
+
+    - name: bottom_shape_type
+      type: select
+      label: Type
+      depends: enable_bottom_shape
+      value: mountains
+      options: 
+        qx-tilt-opacity: Tilt Opacity
+        qx-waves-shake: Waves Shake
+        qx-triangle-wave: Triangle Wave
+        qx-triangle-dobule-wave: Triangle Dobule Wave
+        arrow: Arrow
+        book: Book
+        clouds: Clouds
+        curve-asymmetrical: Curve Asymmetrical
+        curve: Curve
+        drops: Drops
+        mountains: Mountains
+        opacity-fan: Fan Opacity
+        opacity-tilt: Tilt Opacity
+        pyramids: Pyramids
+        split: Split
+        tilt: Tilt
+        triangle-asymmetrical: Triangle Asymmetrical
+        triangle: Triangle
+        wave-brush: Waves Brush
+        waves-pattern: Waves Pattern
+        waves: Waves
+        zigzag: Zigzag
+
+    - name: bottom_shape_color
+      type: color
+      label: Color
+      depends: enable_bottom_shape
+
+    - name: bottom_shape_width
+      type: slider
+      label: Width
+      value: 100
+      min: 100
+      max: 500
+      depends: enable_bottom_shape
+
+    - name: bottom_shape_height
+      type: slider
+      label: Height
+      value: 100
+      max: 700
+      depends: enable_bottom_shape
+
+    - name: bottom_shape_flip
+      type: switch
+      label: Flip
+      depends: enable_bottom_shape
+
+    # - name: bottom_shape_invert
+    #   type: switch
+    #   label: Invert
+    #   depends: enable_bottom_shape
+
+    - name: bottom_shape_bring_front
+      type: switch
+      label: Bring to Front
+      depends: enable_bottom_shape
+
+    - name: box_shadow_divider
+      type: divider
+      label: Box Shadow
+
+    - name : box_shadow
+      type : switch
+      label : Enable Box Shadow 
+
+    - name : box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true  
+
+    - name : box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        box_shadow : true   

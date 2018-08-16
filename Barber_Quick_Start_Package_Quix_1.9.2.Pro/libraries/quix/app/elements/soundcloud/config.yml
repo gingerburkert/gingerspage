@@ -1,0 +1,15 @@
+name: Soundcloud
+slug: soundcloud
+groups: content
+form:
+  general:
+    - name: soundcloud
+      type: textarea
+      help: Paste soundcloud embeed code here.
+
+  styles:
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

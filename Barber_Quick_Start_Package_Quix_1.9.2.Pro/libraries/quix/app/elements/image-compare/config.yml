@@ -1,0 +1,49 @@
+name: Image Compare
+slug: image-compare
+groups: interactive
+form:
+  general:
+    - name: before_image
+      type : divider
+
+    - name: image_before
+      type: file-manager
+      label: Image 
+
+    - name: image_before_alt_text
+      type: text
+      label: Image Alt Text
+      help: Define the image alt text for your image here.
+
+    - name: before_text
+      type: text
+      value: Before
+      label: Before Text
+  
+    - name: after_image
+      type: divider
+
+    - name: image_after
+      type: file-manager
+      label: Image
+
+    - name: image_after_alt_text
+      type: text
+      label: Image Alt Text
+      help: Define the HTML ALT text for your image here.
+
+    - name: after_text
+      type: text
+      value: After
+      label: After Text
+
+    - name: dark_layout
+      type: switch
+      help: Default light layout.
+
+  styles:
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

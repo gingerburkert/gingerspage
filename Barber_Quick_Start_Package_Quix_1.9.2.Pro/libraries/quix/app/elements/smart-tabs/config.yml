@@ -1,0 +1,346 @@
+name: Smart Tabs
+slug: smart-tabs
+groups: interactive
+form:
+  general:
+    - name: tabs
+      type: group-repeater
+      schema:
+        - name: title
+          value: New Tab
+
+        - name: sub_title
+          label: Sub Title
+          type: textarea
+          help: (optional) Text/HTML display below title.
+
+        - name: trigger_id
+          type: text
+          help: Any section,row,column or element ID. Copy ID from Advanced Settings.
+
+        - name: media
+          type: select
+          label: Select Media
+          value: no 
+          options: 
+            no : No
+            icon : Icon 
+            image : Image 
+
+        - name: icon
+          type: icon
+          depends:
+            media: icon
+
+        - name: image
+          type: file-manager
+          depends:
+            media: image
+
+        - name: image_alt_text
+          type: text
+          label: Image Alt Text
+          help: Define the HTML ALT text for your image here.
+          depends:
+            media: image
+
+      value:
+        - title: New Tab
+
+
+    - name: tab_layout
+      type: select
+      label: Layout
+      value: horizontal
+      options:
+        horizontal: Horizontal
+        vertical: Vertical
+
+    - name: media_placement
+      type: select
+      label: Image/Icon Placement
+      value: left
+      options:
+        left: Left
+        right: Right
+        top: Top 
+        bottom: Bottom
+        
+    - name: alignment
+      type: select 
+      label: Alignement
+      value: left
+      image: true
+      options:
+        left: Left 
+        center : Center 
+        right : Right 
+        justify: Justify
+
+  styles:
+    - name: title_style
+      type: divider
+
+    - name: title_font
+      type: typography
+      label: Title Font
+
+    - name : title_color
+      type: color 
+      label: Color
+
+    - name: subtitle_style
+      type: divider
+
+    - name: subtitle_font
+      type: typography
+      label: Subtitle Font
+
+    - name : subtitle_color
+      type: color 
+      label: Color
+
+    - name: subtitle_margin
+      type: margin
+      label: Subtitle Margin
+
+    - name: media_style
+      type: divider 
+
+    - name: icon_size
+      type: slider
+      max: 500
+      suffix: px
+      value: 40
+      responsive: true
+
+    - name: icon_color
+      type: color
+      label: Icon Color
+    
+    - name: media_margin
+      type: margin
+      label: Margin
+
+    - name: nav_hover_style
+      type: divider 
+
+    - name : hover_background_color
+      type: color 
+      label: Background Color
+
+    - name : hover_title_color
+      type: color 
+      label: Title Color
+
+    - name : hover_subtitle_color
+      type: color 
+      label: Sub Title Color
+
+    - name: icon_hover_color
+      type: color
+      label: Icon Color
+
+    - name : hover_box_shadow
+      type : switch
+      label : Box Shadow   
+
+    - name : hover_box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        hover_box_shadow : true 
+
+    - name : hover_box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        hover_box_shadow : true 
+
+    - name : hover_box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        hover_box_shadow : true  
+
+    - name : hover_box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        hover_box_shadow : true 
+
+    - name : hover_box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        hover_box_shadow : true 
+
+    - name : hover_box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        hover_box_shadow : true   
+
+    - name: nav_active_style
+      type: divider 
+
+    - name : active_background_color
+      type: color 
+      label: Background Color
+
+    - name : active_title_color
+      type: color 
+      label: Title Color
+
+    - name : active_subtitle_color
+      type: color 
+      label: Sub Title Color
+
+    - name: icon_active_color
+      type: color
+      label: Icon Color
+
+    - name : active_box_shadow
+      type : switch
+      label : Box Shadow   
+
+    - name : active_box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        active_box_shadow : true 
+
+    - name : active_box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        active_box_shadow : true 
+
+    - name : active_box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        active_box_shadow : true  
+
+    - name : active_box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        active_box_shadow : true 
+
+    - name : active_box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        active_box_shadow : true 
+
+    - name : active_box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        active_box_shadow : true   
+
+    - name: element_style
+      type: divider 
+      label: Element Style - Apply On Element Body
+
+    - name: element_bg
+      type: color
+      label: Background
+
+    - name : box_shadow
+      type : switch
+      label : Box Shadow   
+
+    - name : box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true  
+
+    - name : box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        box_shadow : true   
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+
+  animation :
+    - name: content_animation_divider
+      type: divider
+      label: Tab Content Animation
+
+    - name: content_animation
+      type: select
+      label: Content Animation
+      help: Select content reveal animation
+      value: fadeIn
+      options:
+        fadeIn : Fade
+        bounceIn : Bounce
+        slideInUp : Slide
+        zoomIn : Zoom
+        pulse : Pulse
+

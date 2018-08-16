@@ -1,0 +1,601 @@
+/** CSS CK Framework **/
+/*
+* Februar 2016
+* Cédric KEIFLIN
+* http://www.joomlack.fr - http://www.template-creator.com
+* @version		1.0.0 
+*/
+
+/* ===========================================================
+ * CK Button
+ * ========================================================== */
+
+.ckbutton {
+	display: inline-block;
+	background: #f9f9f9;
+	border: #bbb 1px solid;
+	border-color: #bbb #bbb #a2a2a2;
+	border-radius: 2px;
+	color: #333;
+	font-size: 13px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 18px;
+	margin: 0px 5px 3px 5px;
+	vertical-align: top;
+	padding: 4px 12px;
+	text-decoration: none;
+}
+
+.ckbutton:hover {
+	background: #f1f1f1;
+	text-decoration: none;
+	color: #333;
+}
+
+/*.ckbutton:empty {
+	display: none !important;
+}
+*/
+.ckbutton [class^="icon-"], .ckbutton [class*=" icon-"] {
+	margin: 0;
+}
+
+.ckbutton:active,
+.ckinterface :checked + label.ckbutton,
+.ckbutton.active {
+	color: #333;
+	background: #e6e6e6;
+	outline: 0;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+}
+
+.ckbutton-group {
+	display: inline-block;
+	font-size: 0;
+	position: relative;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.ckbutton-group {
+	display: inline-block;
+	font-size: 0;
+	position: relative;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.ckbutton-group > .ckbutton {
+	margin-left: 2px;
+	margin-right: 0px;
+	border-radius: 0;
+}
+
+.ckbutton-group.small > .ckbutton {
+	padding: 4px 8px;
+}
+
+.ckbutton-group > label.ckbutton {
+	width: auto;
+}
+
+.ckbutton-group > input[type="radio"] {
+	display: none !important;
+}
+
+.ckbutton-group > .ckbutton + .ckbutton,
+.ckbutton-group > input:not(:first-child) + .ckbutton {
+	margin-left: -1px;
+}
+
+.ckbutton-primary.active,
+.ckbutton-warning.active,
+.ckbutton-danger.active,
+.ckbutton-success.active,
+.ckbutton-info.active,
+.ckbutton-inverse.active {
+	color: rgba(255,255,255,0.75);
+}
+.ckbutton-primary {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #1d6cb0;
+	border-color: #15497c #15497c #0a223b;
+}
+.ckbutton-primary:hover,
+.ckbutton-primary:focus,
+.ckbutton-primary:active,
+.ckbutton-primary.active,
+.ckbutton-primary.disabled,
+.ckbutton-primary[disabled] {
+	color: #fff;
+	background-color: #15497c;
+}
+
+.ckbutton-warning {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #faa732;
+	border-color: #f89406 #f89406 #ad6704;
+}
+
+.ckbutton-warning:hover,
+.ckbutton-warning:focus,
+.ckbutton-warning:active,
+.ckbutton-warning.active,
+.ckbutton-warning.disabled,
+.ckbutton-warning[disabled] {
+	color: #fff;
+	background-color: #f89406;
+}
+
+.ckbutton-danger {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #da4f49;
+	border-color: #bd362f #bd362f #802420;
+}
+
+.ckbutton-danger:hover,
+.ckbutton-danger:focus,
+.ckbutton-danger:active,
+.ckbutton-danger.active,
+.ckbutton-danger.disabled,
+.ckbutton-danger[disabled] {
+	color: #fff;
+	background-color: #bd362f;
+}
+
+.ckbutton-success {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #5bb75b;
+	border-color: #51a351 #51a351 #387038;
+}
+.ckbutton-success:hover,
+.ckbutton-success:focus,
+.ckbutton-success:active,
+.ckbutton-success.active,
+.ckbutton-success.disabled,
+.ckbutton-success[disabled] {
+	color: #fff;
+	background-color: #51a351;
+}
+.ckbutton-success:active,
+.ckbutton-success.active {
+	background-color: #408140 \9;
+}
+.ckbutton-info {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #49afcd;
+	border-color: #2f96b4 #2f96b4 #1f6377;
+}
+.ckbutton-info:hover,
+.ckbutton-info:focus,
+.ckbutton-info:active,
+.ckbutton-info.active,
+.ckbutton-info.disabled,
+.ckbutton-info[disabled] {
+	color: #fff;
+	background-color: #2f96b4;
+}
+
+.ckbutton-inverse {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #363636;
+	border-color: #222 #222 #000000;
+}
+.ckbutton-inverse:hover,
+.ckbutton-inverse:focus,
+.ckbutton-inverse:active,
+.ckbutton-inverse.active,
+.ckbutton-inverse.disabled,
+.ckbutton-inverse[disabled] {
+	color: #fff;
+	background-color: #222;
+}
+
+
+/* ===========================================================
+ * CK Forms
+ * ========================================================== */
+
+.ckinterface {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	background: #fff;
+	line-height: 22px;
+}
+
+.ckinterface label {
+	width: 150px;
+}
+
+.ckinterface textarea,
+.ckinterface select,
+.ckinterface input[type="text"], 
+.ckinterface input[type="password"], 
+.ckinterface input[type="datetime"], 
+.ckinterface input[type="datetime-local"], 
+.ckinterface input[type="date"], 
+.ckinterface input[type="month"], 
+.ckinterface input[type="time"], 
+.ckinterface input[type="week"], 
+.ckinterface input[type="number"], 
+.ckinterface input[type="email"], 
+.ckinterface input[type="url"], 
+.ckinterface input[type="search"], 
+.ckinterface input[type="tel"], 
+.ckinterface input[type="color"], 
+.ckinterface .uneditable-input {
+	border-radius: 0;
+	margin: 0px 0px 3px 0px;
+	padding: 4px 6px;
+	/*vertical-align: middle;*/
+	display: inline-block;
+	font-size: 13px;
+	min-height: 18px;
+	line-height: 18px;
+	vertical-align: top;
+	color: #555;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	   -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+		 -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+			transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+/*textarea,select {
+	height: auto;
+	border-radius: 0;
+}*/
+
+.ckinterface textarea:focus, .ckinterface  input[type="text"]:focus, .ckinterface  input[type="password"]:focus, .ckinterface  input[type="datetime"]:focus, .ckinterface  input[type="datetime-local"]:focus, .ckinterface  input[type="date"]:focus, .ckinterface  input[type="month"]:focus, .ckinterface  input[type="time"]:focus, .ckinterface  input[type="week"]:focus, .ckinterface  input[type="number"]:focus, .ckinterface  input[type="email"]:focus, .ckinterface  input[type="url"]:focus, .ckinterface  input[type="search"]:focus, .ckinterface  input[type="tel"]:focus, .ckinterface  input[type="color"]:focus, .ckinterface  .uneditable-input:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/* ===========================================================
+ * CK Tooltip
+ * ========================================================== */
+
+.cktooltip {
+	position: absolute;
+	z-index: 1030;
+	display: block;
+	visibility: visible;
+	font-size: 11px;
+	line-height: 1.4;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.cktooltip.in {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.cktooltip.top {
+	margin-top: -3px;
+	padding: 5px 0;
+}
+.cktooltip.right {
+	margin-left: 3px;
+	padding: 0 5px;
+}
+.cktooltip.bottom {
+	margin-top: 3px;
+	padding: 5px 0;
+}
+.cktooltip.left {
+	margin-left: -3px;
+	padding: 0 5px;
+}
+.cktooltip-inner {
+	max-width: 200px;
+	padding: 8px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	background-color: #000;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.cktooltip-arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+}
+.cktooltip.top .cktooltip-arrow {
+	bottom: 0;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px 5px 0;
+	border-top-color: #000;
+}
+.cktooltip.right .cktooltip-arrow {
+	top: 50%;
+	left: 0;
+	margin-top: -5px;
+	border-width: 5px 5px 5px 0;
+	border-right-color: #000;
+}
+.cktooltip.left .cktooltip-arrow {
+	top: 50%;
+	right: 0;
+	margin-top: -5px;
+	border-width: 5px 0 5px 5px;
+	border-left-color: #000;
+}
+.cktooltip.bottom .cktooltip-arrow {
+	top: 0;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 0 5px 5px;
+	border-bottom-color: #000;
+}
+
+/* ===========================================================
+ * CK General settings
+ * ========================================================== */
+ 
+.ckrow {
+	margin-top: 0;
+	margin-bottom: 5px;	
+}
+
+.ckinterface .ckicon {
+	vertical-align: -3px;
+}
+
+/* ===========================================================
+ * Table
+ * ========================================================== */
+
+.cktable {
+	width: 100%;
+	margin-bottom: 18px;
+	max-width: 100%;
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.cktable th,
+.cktable td {
+	padding: 8px;
+	line-height: 18px;
+	text-align: left;
+	vertical-align: top;
+	/*border-top: 1px solid #ddd;*/
+}
+.cktable th {
+	font-weight: bold;
+}
+.cktable thead th {
+	vertical-align: bottom;
+}
+.cktable caption + thead tr:first-child th,
+.cktable caption + thead tr:first-child td,
+.cktable colgroup + thead tr:first-child th,
+.cktable colgroup + thead tr:first-child td,
+.cktable thead:first-child tr:first-child th,
+.cktable thead:first-child tr:first-child td {
+	border-top: 0;
+}
+.cktable tbody + tbody {
+	border-top: 2px solid #ddd;
+}
+.cktable .cktable {
+	/*background-color: #fff;*/
+}
+.cktable-condensed th,
+.cktable-condensed td {
+	padding: 4px 5px;
+}
+.cktable-bordered {
+	border: 1px solid #ddd;
+	border-collapse: separate;
+	*border-collapse: collapse;
+	border-left: 0;
+	/*-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;*/
+}
+.cktable-bordered th,
+.cktable-bordered td {
+	border-left: 1px solid #ddd;
+}
+.cktable-bordered caption + thead tr:first-child th,
+.cktable-bordered caption + tbody tr:first-child th,
+.cktable-bordered caption + tbody tr:first-child td,
+.cktable-bordered colgroup + thead tr:first-child th,
+.cktable-bordered colgroup + tbody tr:first-child th,
+.cktable-bordered colgroup + tbody tr:first-child td,
+.cktable-bordered thead:first-child tr:first-child th,
+.cktable-bordered tbody:first-child tr:first-child th,
+.cktable-bordered tbody:first-child tr:first-child td {
+	border-top: 0;
+}
+.cktable-striped tbody > tr:nth-child(odd) > td,
+.cktable-striped tbody > tr:nth-child(odd) > th {
+	background-color: #f9f9f9;
+}
+.cktable-hover tbody tr:hover > td,
+.cktable-hover tbody tr:hover > th {
+	background-color: #f5f5f5;
+}
+
+/* ===========================================================
+ * Messages
+ * ========================================================== */
+
+[class^="ckalert"] {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.ckalert {
+	background-color: #fcf8e3;
+	border: 1px solid #faebcc;
+}
+.ckalert,
+.ckalert h4 {
+	color: #8a6d3b;
+}
+.ckalert h4 {
+	margin: 0 0 .5em;
+}
+.ckalert .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	line-height: 18px;
+}
+.ckalert-success {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #3c763d;
+}
+.ckalert-success h4 {
+	color: #3c763d;
+}
+.ckalert-danger,
+.ckalert-error {
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	color: #a94442;
+}
+.ckalert-danger h4,
+.ckalert-error h4 {
+	color: #a94442;
+}
+.ckalert-info {
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color: #31708f;
+}
+.ckalert-info h4 {
+	color: #31708f;
+}
+
+
+/* ===========================================================
+ * Interface with tabs
+ * ========================================================== */
+
+.cktab {
+	min-height: 500px;
+	overflow-y: auto;
+	position: relative;
+}
+
+.ckmenulink {
+	float: left;
+	padding: 5px 10px;
+	margin: 5px 5px 0 5px;
+	cursor: pointer;
+	color: #a6a6a6;
+	background: #eee;
+	border-radius: 5px 5px 0 0;
+	border: 1px solid #ddd;
+	position: relative;
+	z-index: 1;
+}
+
+.cktablinkdesc {
+	text-align: center;
+	font-size: 10px;
+	color: #a6a6a6;
+	line-height: 10px;
+}
+
+.ckmenulink:hover, .ckmenulink.current {
+	color: #000;
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.ckmenulink + .clr {
+	clear: both;
+	border-top: 1px solid #ddd;
+	margin-bottom: 5px;
+	position: relative;
+	z-index: 0;
+	top: -1px;
+	visibility: visible;
+}
+
+.cktab input[type="radio"], input[type="checkbox"] {
+	border: none;
+}
+
+.ckmenulink2 {
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	height: 20px;
+	margin: 5px 0 3px 3px;
+	padding: 15px;
+	color: #a6a6a6;
+	background: #eee;
+	border-radius: 5px 0 0 5px;
+	border: 1px solid #ddd;
+}
+
+.ckmenulink2:hover, .ckmenulink2.current {
+	background: #fff;
+	border-right: 1px solid #fff;
+	color: #21759b;
+}
+
+.cktab2 {
+	padding: 0 0 0 10px;
+}
+
+.cktab.hascol:after {
+	border-right: 1px solid #ddd;
+	content: "";
+	display: block;
+	float: left;
+	height: 100%;
+	left: 169px;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	width: 0;
+}
+
+.ckcol_left {
+	float: left;
+	width: 170px;
+	height: 250px;
+}
+
+.ckcol_right {
+	float: left;
+	width: 610px;
+}
+
+.ckdisabled {
+	cursor: default;
+	background-image: none;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}

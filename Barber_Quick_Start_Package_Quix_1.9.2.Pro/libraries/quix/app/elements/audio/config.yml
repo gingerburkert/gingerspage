@@ -1,0 +1,31 @@
+name: Audio
+slug: audio
+groups: content
+form:
+  general:
+    - name: audio_mp3_link
+      type: file-manager
+      label: MP3 File
+
+    - name: audio_ogg_link
+      type: file-manager
+      label: OGG File
+
+    - name: autoplay_audio
+      type: switch
+      label: Autoplay
+
+    - name: repeat_track
+      type: switch
+      type: Repeaat Track
+
+  styles:
+    - name : element
+      type : divider
+      label : Element Style - Apply On Element Body
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

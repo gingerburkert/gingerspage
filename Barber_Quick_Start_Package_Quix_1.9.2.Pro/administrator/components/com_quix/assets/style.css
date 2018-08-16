@@ -1,0 +1,31 @@
+.com_quix.view-integrations .container-main .btn-group .btn-success{
+    background: #00c853;
+    color: #fff;
+}
+
+.com_quix.view-integrations .container-main .btn-group .btn-danger{
+    background: rgb(148, 42, 37);
+}
+.com_quix.view-integrations .container-main .form-horizontal .control-group .spacer span{
+	display: block;
+}
+.com_quix.view-integrations .container-main .form-horizontal .control-label .spacer:parent{
+	float: none;
+}
+
+.com_quix.view-integrations .container-main .success-message{
+    width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  line-height: 52px;
+  font-size: 20px;
+  color: #62e2aa;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  z-index: 9999;
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<fieldset name="basic">
+
+	    <field
+			name="name"
+			type="text"
+			label="QX_CF_YOUR_NAME"
+			required="true"
+			hint="QX_CF_YOUR_NAME_HINT"
+	    />
+
+	    <field
+			name="email"
+			type="email"
+			label="QX_CF_YOUR_EMAIL"
+			required="true"
+			hint="QX_CF_YOUR_EMAIL_HINT"
+	    />
+
+	    <field
+			name="subject"
+			type="text"
+			label="QX_CF_YOUR_SUBJECT"
+			required="true"
+			hint="QX_CF_YOUR_SUBJECT_HINT"
+	    />
+
+	    <field
+			name="body"
+			type="textarea"
+			label="QX_CF_YOUR_MESSAGE"
+			required="true"
+			hint="QX_CF_YOUR_MESSAGE_HINT"
+	    />
+
+
+	 </fieldset>
+</form>

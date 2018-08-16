@@ -1,0 +1,138 @@
+name: Modal Popup
+slug: modal-popup
+groups: content
+form:
+  general:
+    - name: modal_selector
+      type: select
+      value: button
+      options:
+        button: Button
+        image: Image
+        icon: Icon
+
+    - name: button
+      type: text
+      value: Launch Modal
+      label: Button Text
+      depends:
+        modal_selector: button
+
+    - name: button_style
+      type: select
+      value: qx-btn-default
+      depends:
+        modal_selector: button
+      options:
+        qx-btn-default: Default
+        qx-btn-primary: Primary
+        qx-btn-success: Success
+        qx-btn-info: Info
+        qx-btn-warning: Warning
+        qx-btn-danger: Danger
+        qx-btn-link: Link
+
+    - name: image
+      type: file-manager
+      depends:
+        modal_selector: image
+
+    - name: alt_text
+      type: text
+      depends:
+        modal_selector: image
+
+    - name: icon
+      type: icon
+      depends:
+        modal_selector: icon
+
+    - name: title
+      type: text
+      value: Modal title
+
+    - name: content
+      type: editor
+      value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+  styles:
+
+    - name: trigger_style
+      type: divider
+
+    - name: trigger_alignment
+      type: select
+      value: left
+      label: Alignment
+      image: true
+      responsive: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+    - name: button_font
+      type: typography
+      depends:
+        modal_selector: button
+
+    - name: icon_size
+      type: slider
+      label: Icon Size
+      value: 30
+      suffix: px
+      responsive: true
+      depends:
+        modal_selector: icon
+
+    - name: title_style
+      type: divider
+
+    - name: title_font
+      type: typography
+      label: Title Font
+
+    - name: title_color
+      type: color
+
+    - name: title_alignment
+      type: select
+      value: left
+      label: Alignment
+      image: true
+      responsive: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+    - name: content_style
+      type: divider
+
+    - name: alignment
+      type: select
+      value: left
+      label: Text Alignment
+      image: true
+      responsive: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+        justify: Justify
+
+    - name: font
+      type: typography
+
+    - name: text_color
+      type: color
+      label: Text Color
+
+    - name: global_style
+      type: divider
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

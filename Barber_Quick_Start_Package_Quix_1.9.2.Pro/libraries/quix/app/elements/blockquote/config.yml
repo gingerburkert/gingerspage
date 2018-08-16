@@ -1,0 +1,44 @@
+name: Blockquote
+slug: blockquote
+groups: content
+form:
+  general:
+    - name: content
+      type: textarea
+      value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+    - name: footer_text
+      type: text
+      value: Deleniti mnesarchum ex
+
+    - name: alignment
+      type: select
+      value: left
+      options:
+        left: Left
+        center: Center
+        right: Right
+        justify: Justify
+      image: true 
+      responsive: true
+
+  styles:
+    - name: font
+      type: typography
+
+    - name: color
+      type: color
+      label: Text Color
+
+    - name: bar_color
+      type: color
+
+    - name: element
+      type: divider
+      label: Element Style - Apply On Element Body
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

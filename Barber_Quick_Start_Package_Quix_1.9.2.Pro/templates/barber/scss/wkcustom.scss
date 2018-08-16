@@ -1,0 +1,246 @@
+/*
+ * @author WebKomp https://www.web-komp.eu
+ * @copyright Copyright (C) web-komp.eu All rights reserved.
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later
+*/
+
+.heading-divider{
+		padding-bottom: 10px;
+		background: url(../images/heading-divider.png) no-repeat center bottom;
+	}
+	
+	
+.com-quix #sp-main-body {
+    padding: 0;
+}
+	
+	
+	/* contact form */
+div.qx-element-contact-form{
+		.controls{
+			margin: 0;
+			button{
+				float: left;
+				&:after{
+					right: 0px;
+					content: "\f0e0";
+					margin-left: 10px;
+					position: relative;
+					font-family: FontAwesome;
+					background:$link_color;
+				}
+			}
+		}
+	
+}
+
+
+/*-Buttons contact form --*/
+  .qx-btn-primary{
+	color: #fff;
+	font-size: 16px;
+	/* min-width: 150px; */
+	text-align: left;
+	padding: 5px 25px;
+	position: relative;
+	border-radius: 5px;
+	background: $link_color;
+	border: 2px solid  $link_color;
+	&:hover, &:focus, &:active{
+		color: #fff;
+		background: darken($link_color, 10%);
+		border-color: darken($link_color, 10%);
+	}
+	&:active{
+		&:hover, &:focus{
+			color: #fff;
+			background: darken($link_color, 10%);
+			border-color: darken($link_color, 10%);
+		}
+	}
+}
+
+/*-Acymailing-*/
+
+.acymailing_module{
+	.acymailing_introtext{
+		margin-bottom: 10px !important;
+	}
+	table.acymailing_form{
+		margin: 0;
+		width: 100%;
+		tr{
+		}
+		td.acysubbuttons{
+			input.button{
+				min-width: auto;
+				padding: 7px 25px;
+				margin-left: -40px;
+				border-radius: 3px;
+			}
+		}
+	}
+	input[type="text"]{
+		border: none;
+		height: auto;
+		box-shadow: none;
+		padding: 10px 25px;
+		background: #f5f5f8;
+		border-radius: 3px;
+	}
+	.acymailing_finaltext{
+		margin-top: 10px !important;
+	}
+}
+
+
+
+
+
+
+// Person
+.qx-element-person {
+  .social-links>a {
+    font-size: 14px;
+  }
+  .qx-person-img {
+    overflow: hidden;
+    img {
+      transition: all .3s ease;
+    }
+  }
+  &:hover {
+    .qx-person-img {
+      img {
+        transform: scale(1.1) rotate(-3deg);
+      }
+    }
+  }
+}
+
+
+
+
+// Joomla Article
+.qx-element-joomla-articles {
+  &.qx-layout-grid {
+    .qx-media-grid {
+      
+      figure {
+        overflow: hidden;
+        img {
+          transition: all .3s ease;
+        }
+      }
+
+      &:hover {
+        
+        figure {
+          img {
+            transform: scale(1.1) rotate(-3deg);
+          }
+        }
+      }
+    }
+    .qx-media-body {
+      padding: 22px;
+      .qx-media-heading {
+        a {
+        
+
+          &:hover {
+           
+          }
+        }
+      }
+
+      .qx-element-jartil-details > p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .post-meta {
+    font-size: 14px;
+    color: #aaa;
+  }
+  &.qx-layout-grid.no-box-shadow {
+    .qx-media-grid {
+      box-shadow: none;
+      .qx-media-body {
+        padding: 22px 0;
+      }
+    }
+  }
+}
+
+
+
+
+.qx-element-filterable-gallery {
+  .qx-fg-filter {
+    li {
+      a {
+        &.btn {
+          padding: 8px 25px;
+          margin-bottom: 5px;
+          border-radius: 4px;
+          border-color: $link_color;
+          color: $link_color;
+          &:hover {
+            background: $link_color;
+            color: #fff;
+          }
+          &.active {
+            background:$link_color;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+  
+  .qx-overlay-hover {
+    .qx-fg-title {
+      color: #fff;
+    }
+  }
+}
+
+
+.qx-element-tabs {
+ 
+  .tabs {
+    background-color: #f4f4f4;
+    
+    clear: both;
+    overflow: hidden;
+
+    > li {
+
+      &:hover {
+       
+      }
+      a {
+        border: 0;
+     
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: $link_color;
+        &.active {
+          background: $link_color;
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+}
+
+
+
+.sp-megamenu-parent > li > a, .sp-megamenu-parent > li > span {
+    line-height: 58px;
+}

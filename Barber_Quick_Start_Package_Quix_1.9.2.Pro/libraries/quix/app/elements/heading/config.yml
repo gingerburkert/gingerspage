@@ -1,0 +1,125 @@
+name: Heading
+slug: heading
+groups: content
+
+form:
+  general:
+    - name: title_text
+      type: text
+      value: Heading Text
+
+    - name: paragraph_text
+      type: editor
+      label: Subtitle
+
+    - name: subtitle_position
+      type: select
+      value: after_title
+      options:
+        before_title : Before Title 
+        after_title : After Title
+
+    - name: title_tag
+      type: select
+      multiple: false
+      label: Title Tag
+      value: h2
+      help: Default title Tag is h2
+      options:
+        h1: H1
+        h2: H2
+        h3: H3
+        h4: H4
+        h5: H5
+        h6: H6
+        div: DIV
+
+    - name: alignment
+      type: select
+      value: center
+      label: Text Alignment
+      options:
+        left: Left
+        center: Center
+        right: Right
+      image: true
+      responsive: true
+
+  styles:
+    - name: title_style
+      type: divider
+      label: Title Style
+
+    - name: title_font
+      type: typography
+      label: Font
+
+    - name: title_text_color
+      type: color
+      label: Text Color
+
+    - name: title_text_margin
+      type: margin
+      label: Margin 
+
+    - name: title_span_note
+      type: divider 
+      label: Wrap words from title text with <span> will apply this styles. Eg - Hello <span>Beautiful</span> World.
+
+    - name : title_span_font
+      type: typography
+      label: Span Font 
+
+    - name : title_span_color
+      type: color 
+      label: Span Color
+
+    - name: subtitle_style
+      type: divider
+      label: Subtitle Style
+
+    - name: paragraph_font
+      type: typography
+      label: Font
+
+    - name: paragraph_text_color
+      type: color
+      label: Text Color
+
+    - name: paragraph_text_margin
+      type: margin
+      label: Margin 
+
+    - name: element
+      type: divider
+      label: Element Style - Apply On Element Body
+
+    - name: bg_color
+      type: color 
+      label: Background Color
+
+    - name: enable_border
+      type: switch
+      label: Border
+
+    - name: border_width
+      type: text
+      label: Border Width 
+      value: 1px 0px
+      help: Single or multiple value is allowed. Eg- 1px OR 1px 0 1px 0 etc.
+      depends:
+        enable_border: true
+
+    - name: border_color
+      type: text
+      label: Border Color 
+      value: '#2196F3 transparent'
+      help: 'Single or multiple value is allowed. Eg- #2196F3 OR #2196F3 transparent red transparent'
+      depends:
+        enable_border: true
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

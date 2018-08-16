@@ -1,0 +1,222 @@
+name: Person
+slug: person
+groups: content
+form:
+  general:
+    - name: name
+      type: text
+      help: Input the name of the person
+      value: Team Member 1
+
+    - name: position
+      type: text
+      help: Input the person's position.
+      value: Company Role
+
+    - name: image
+      type: file-manager
+      help: Upload your desired image, or type in the URL to the image you would like to display.
+
+    - name: description
+      type: editor
+      value: Aenean consectetur ipsum ante, vel egestas enim tincidunt quis. Pellentesque vitae congue neque, vel mattis ante. In vitae tempus nunc.
+
+    - name: social
+      type: input-repeater
+      label: Social Links
+      help: 
+      schema:
+        name: link
+        type: text
+      value: ['https://www.twitter.com/themexpert']
+
+  styles:
+    - name: title_styles
+      type: divider
+
+    - name: header_font
+      type: typography
+      lable: Font
+
+    - name: header_color
+      type: color 
+      label: Text Color
+
+    - name: header_margin
+      type: margin
+      lable: Margin
+
+    - name: position_styles
+      type: divider
+
+    - name: position_font
+      type: typography
+      lable: Font
+
+    - name: position_color
+      type: color 
+      label: Text Color
+
+    - name: image_styles
+      type: divider
+      label: Image Styles
+
+    - name: image_style
+      type: select
+      value: square
+      lable: Image Style
+      options:
+        img-square : Square
+        img-rounded: Rounded
+        img-circle : Circle
+
+    - name: image_margin
+      type: margin
+      label: Image Margin
+
+    - name: social_style
+      type: divider
+
+    - name: icon_color
+      type: color 
+      label: Icon Color 
+
+    - name: icon_hover_color
+      type: color 
+      label: Icon Hover Color 
+    
+    - name: body_styles
+      type: divider
+      label: Content Style
+
+    - name: body_font
+      type: typography
+      label: Font
+
+    - name: body_text_color
+      type: color 
+      label: Text Color
+
+    - name: body_margin
+      type: margin
+      label: Margin
+
+    - name: global_style
+      type: divider
+      label: Global Style
+
+    - name: alignment
+      type: select
+      value: left
+      label: Text Alignment
+      image: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+    - name: bg_color
+      type: color 
+      labe: Background Color 
+
+    - name: bg_image
+      type: file-manager 
+      label: Background Image
+
+    - name : box_shadow
+      type : switch
+      label : Enable Box Shadow   
+
+    - name : box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true  
+
+    - name : box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        box_shadow : true     
+
+    - name: border
+      type: switch
+      label: Enable Border
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      suffix: px
+      value: 2
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      suffix: px
+      value: 3
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

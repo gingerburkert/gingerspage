@@ -1,0 +1,9 @@
+# Note: Having a .htaccess prevents users from directly
+# accessing the files in your data folder
+
+Order deny,allow
+Deny from all
+
+<Files ~ "export_(.*)\.pbck$">
+  Allow from all
+</Files>

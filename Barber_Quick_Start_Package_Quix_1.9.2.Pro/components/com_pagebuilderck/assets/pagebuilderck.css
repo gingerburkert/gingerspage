@@ -1,0 +1,493 @@
+/**
+ * @name		Page Builder CK
+ * @package		com_pagebuilderck
+ * @copyright	Copyright (C) 2015. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @author		Cedric Keiflin - http://www.template-creator.com - http://www.joomlack.fr
+ */
+
+/* Fix for Firefox where the elements go out of the page in edition mode */
+.edit.item-page fieldset,
+#item-form fieldset {
+	display: table-cell;
+}
+
+/* For elements to get the correct size */
+#workspaceck * {
+	box-sizing: border-box;
+}
+
+#workspaceck .inner:before, .pagebuilderck .inner:before {
+	border-radius: inherit;
+}
+
+/* For equal heights */
+.blockck > .inner {
+	/*height: 100%;*/
+	box-sizing: border-box;
+	flex: 1 1 auto;
+	/*overflow: hidden;*/ /* fix for IE, to remove unwanted space */
+}
+
+.pagebuilderck {
+	/*overflow-x: hidden;*/  /* do not use, causes scroll bar to appear : fix for animation that are outside the screen */
+}
+
+.pagebuilderck img {
+	max-width: 100%;
+	height: auto;
+}
+
+.rowck.ckadvancedlayout > .inner {
+	flex-wrap: wrap;
+}
+
+/* ---------------------------------------
+	Responsive design code
+	Needed for V1 B/C
+-----------------------------------------*/
+
+@media screen and (max-width: 524px) {
+
+	.pagebuilderck .row-fluid:not([class*="ckstack"]) .ckhidephone {
+		display: none !important;
+	}
+
+	.pagebuilderck .row-fluid:not([class*="ckstack"]) .blockck[class*="span"] {
+		display: block;
+		float: none !important;
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+
+	.rowck.row-fluid:not([class*="ckstack"]) > .inner {
+		display: block !important;
+	}
+
+}
+
+@media screen and (min-width: 525px) {
+	.pagebuilderck .row-fluid:not([class*="ckstack"]) .ckhidedesktop {
+		display: none !important;
+	}
+}
+
+.pagebuilderck {
+	clear: both;
+}
+
+.pagebuilderck img {
+	max-width: 100%;
+	height: auto;
+}
+
+.blockck {
+	display: flex;
+	flex-direction: column;
+	float: left;
+	min-height: 1px; /* needed else the empty blocks will not take place */
+}
+
+.rowck > .inner {
+	display: flex;
+}
+
+/*------------- default width for columns (from bootstrap) ------------------*/
+.pagebuilderck .row-fluid {
+  width: 100%;
+  *zoom: 1;
+}
+
+.pagebuilderck .row-fluid:before,
+.pagebuilderck .row-fluid:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.pagebuilderck .row-fluid:after {
+  clear: both;
+}
+
+.pagebuilderck .row-fluid [class*="span"] {
+  display: block;
+  float: left;
+  width: 100%;
+  min-height: 30px;
+  margin-left: 2.127659574468085%;
+  *margin-left: 2.074468085106383%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pagebuilderck .row-fluid [class*="span"]:first-child {
+  margin-left: 0;
+}
+
+.pagebuilderck .row-fluid .controls-row [class*="span"] + [class*="span"] {
+  margin-left: 2.127659574468085%;
+}
+
+.pagebuilderck .row-fluid .span12 {
+  width: 100%;
+  *width: 99.94680851063829%;
+}
+
+.pagebuilderck .row-fluid .span11 {
+  width: 91.48936170212765%;
+  *width: 91.43617021276594%;
+}
+
+.pagebuilderck .row-fluid .span10 {
+  width: 82.97872340425532%;
+  *width: 82.92553191489361%;
+}
+
+.pagebuilderck .row-fluid .span9 {
+  width: 74.46808510638297%;
+  *width: 74.41489361702126%;
+}
+
+.pagebuilderck .row-fluid .span8 {
+  width: 65.95744680851064%;
+  *width: 65.90425531914893%;
+}
+
+.pagebuilderck .row-fluid .span7 {
+  width: 57.44680851063829%;
+  *width: 57.39361702127659%;
+}
+
+.pagebuilderck .row-fluid .span6 {
+  width: 48.93617021276595%;
+  *width: 48.88297872340425%;
+}
+
+.pagebuilderck .row-fluid .span5 {
+  width: 40.42553191489362%;
+  *width: 40.37234042553192%;
+}
+
+.pagebuilderck .row-fluid .span4 {
+  width: 31.914893617021278%;
+  *width: 31.861702127659576%;
+}
+
+.pagebuilderck .row-fluid .span3 {
+  width: 23.404255319148934%;
+  *width: 23.351063829787233%;
+}
+
+.pagebuilderck .row-fluid .span2 {
+  width: 14.893617021276595%;
+  *width: 14.840425531914894%;
+}
+
+.pagebuilderck .row-fluid .span1 {
+  width: 6.382978723404255%;
+  *width: 6.329787234042553%;
+}
+
+/*------------- default jquery ui styles ------------------*/
+.cktype .ui-helper-clearfix::before, .cktype .ui-helper-clearfix::after {
+	border-collapse: collapse;
+	content: "";
+	display: table;
+}
+.cktype .ui-helper-clearfix::after {
+	clear: both;
+}
+
+/*------------- styles for accordion ------------------*/
+.cktype .ui-accordion .ui-accordion-header {
+	background: #fff;
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin: 2px 0 0 0;
+	padding: .5em .5em .5em .7em;
+	min-height: 0; /* support: IE7 */
+	font-size: 100%;
+	border: 1px solid #ddd;
+	border-radius: 0;
+}
+.cktype .ui-accordion .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.cktype .ui-accordion .ui-accordion-icons .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.cktype .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -8px;
+}
+.cktype .ui-accordion .ui-accordion-content {
+	padding: 1em 2.2em;
+	border-top: 0;
+	overflow: auto;
+	border: 1px solid #ddd;
+	border-top: none;
+	border-radius: 0;
+}
+.cktype .ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+.cktype .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -4px;
+	margin-left: 5px;
+}
+.cktype .ui-icon-triangle-1-e {
+	height: 0;
+	width: 0;
+	border-color: transparent transparent transparent #ddd;
+	border-style: solid;
+	border-width: 4px 0 4px 6px;
+}
+.cktype .ui-icon-triangle-1-s {
+	height: 0;
+	width: 0;
+	border-color: #ddd transparent transparent transparent;
+	border-style: solid;
+	border-width: 6px 4px 0 4px;
+}
+/*------------- styles for tabs ------------------*/
+.cktype .ui-tabs {
+	border: none;
+	background: none;
+	border-radius: 0;
+	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	padding: .2em;
+}
+.cktype .ui-tabs .ui-tabs-nav {
+	border: none;
+	background: none;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+}
+.cktype .ui-tabs.vertical_tabsck .ui-tabs-nav {
+	float: left;
+	width: 200px;
+}
+.cktype .ui-tabs.vertical_tabsck .ui-tabs-nav ~ .tabck {
+	margin-left: 200px;
+}
+.cktype .ui-tabs .ui-tabs-nav li {
+	background: #fff;
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 1px .2em 0 0;
+	border-color: #ddd;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom-width: 0;
+	padding: 0;
+	/*white-space: nowrap;*/
+}
+
+.cktype .ui-tabs.vertical_tabsck .ui-tabs-nav li {
+	float: none;
+	border-bottom-width: 1px;
+}
+.cktype .ui-tabs.vertical_tabsck .ui-tabs-nav li > a {
+	display: block;
+	float: none;
+}
+
+.cktype .ui-tabs .ui-tabs-nav li.ui-state-default {
+	background: #eee;
+}
+.cktype .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	background: #fff;
+}
+.cktype .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+.cktype .ui-tabs:not(.vertical_tabsck) .ui-tabs-nav li.ui-tabs-active {
+	margin-bottom: -1px;
+	padding-bottom: 1px;
+}
+.cktype .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.cktype .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.cktype .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+	cursor: text;
+}
+.cktype .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+	cursor: pointer;
+}
+.cktype .ui-tabs .ui-tabs-panel {
+	background: #fff;
+	display: block;
+	border-width: 0;
+	padding: 1em 1.4em;
+	background: none;
+}
+
+/*------------- styles for message ------------------*/
+.messageck > div {
+	display: inline-block;
+}
+
+.alertck {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	margin-top: 9px;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.alertck,
+.alertck .messageck_title {
+	color: #c09853;
+}
+.alertck .messageck_title {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
+	margin: 0;
+}
+.alertck p {
+	padding: 5px 0;
+	margin: 0;
+}
+.alertck .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	line-height: 18px;
+}
+.alertck-success {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #468847;
+}
+.alertck-success .messageck_title {
+	color: #468847;
+}
+.alertck-danger,
+.alertck-error {
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+}
+.alertck-danger .messageck_title,
+.alertck-error .messageck_title {
+	color: #b94a48;
+}
+.alertck-info {
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color: #3a87ad;
+}
+.alertck-info .messageck_title {
+	color: #3a87ad;
+}
+
+/*------------- styles for separator ------------------*/
+
+.separatorck {
+	overflow: hidden;
+	text-align: center;
+	padding: 10px;
+	color: #000;
+}
+.separatorck .separatorck_before,
+.separatorck .separatorck_after {
+	background-color: #000;
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+}
+.separatorck .separatorck_before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+.separatorck .separatorck_after {
+	left: 0.5em;
+	margin-right: -50%;
+}
+
+/*------------- best compatibility for image effect CK ------------------*/
+
+.imageck figure.imageeffectck {
+	/*display: block;
+	margin: 0;*/
+}
+
+/*------------- styles for video and other iframes ------------------*/
+.videock {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	padding-bottom: 56.25%;
+	max-width: 100%;
+}
+
+.videock iframe, .videock video  {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border: none;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+}
+
+.videockbackground { 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	background-size: cover; 
+}
+
+.hasvideockbackground {
+	z-index: 0;
+}
+
+[data-type="icontext"] > .inner {
+	display: flex;
+	flex-direction: column;
+}
+
+[data-type="icontext"] .iconck {
+	align-self: center;
+}
+
+[data-type="icontext"][data-layout="bottom"] > .inner {
+	flex-direction: column-reverse;
+}
+
+[data-type="icontext"][data-layout="left"] > .inner {
+	flex-direction: row;
+}
+
+[data-type="icontext"][data-layout="right"] > .inner {
+	flex-direction: row-reverse;
+}

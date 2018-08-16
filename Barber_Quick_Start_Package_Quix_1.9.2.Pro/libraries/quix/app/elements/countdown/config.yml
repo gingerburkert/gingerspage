@@ -1,0 +1,63 @@
+name: Countdown
+slug: countdown
+groups: interactive
+form:
+  general:
+    
+    - name: date
+      type: date
+
+    - name: time
+      type: time
+
+    - name: offer_expired
+      type: text
+      label: Expire Message
+      help: This message will show when the time expire.
+
+  styles:
+
+    - name: text_style
+      type: divider
+
+    - name: font
+      type: typography
+
+    - name: color
+      type: color
+
+    - name: number_style
+      type: divider
+
+    - name: number_font
+      type: typography
+      label: Font 
+
+    - name: number_color
+      type: color 
+      label: Color
+
+    - name: expired_message_style
+      type: divider
+
+    - name: expired_message_font
+      type: typography
+      label: Message Font
+
+    - name: expired_message_color
+      type: color
+      label: Message Color
+
+    - name : element
+      type : divider
+      label: Element Styles
+
+    - name: bg_color
+      type: color
+      label: Background Color
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

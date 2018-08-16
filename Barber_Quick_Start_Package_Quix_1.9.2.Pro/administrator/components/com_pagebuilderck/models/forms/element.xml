@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field 
+			name="id" 
+			type="hidden" 
+			default="0" 
+			label="COM_PAGEBUILDERCK_FORM_LBL_PAGE_ID"
+			readonly="true" 
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" />
+		
+		<field name="title" 
+			type="text" 
+			label="JGLOBAL_TITLE"
+			description="JFIELD_TITLE_DESC"
+			class="input-xxlarge input-large-text"
+			size="40"
+			required="true" />
+		<field name="description" 
+			type="text" 
+			label="JGLOBAL_TITLE"
+			description="JFIELD_TITLE_DESC"
+			class="input-xxlarge input-large-text"
+			size="40"
+			/>
+		<field name="type" 
+			type="hidden" 
+			/>
+		<field name="htmlcode" type="editor" buttons="true"
+		   class="inputbox"
+		   filter="safehtml"
+		   label="COM_PAGEBUILDERCK_FORM_LBL_PAGE_HTMLCODE"
+		   description="COM_PAGEBUILDERCK_FORM_DESC_PAGE_HTMLCODE"  />
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+			filter="intval">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+</form>

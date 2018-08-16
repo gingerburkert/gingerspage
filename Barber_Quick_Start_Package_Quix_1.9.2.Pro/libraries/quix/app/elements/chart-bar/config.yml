@@ -1,0 +1,73 @@
+name: Bar Chart
+slug: chart-bar
+groups: Chart
+
+form:
+  general:
+    - name: bar-chart
+      type: group-repeater
+      schema:
+        - name: label
+          help: The label for the dataset which appears in the legend and tooltips.
+          value: Coffee
+
+        - name: data
+          type: text
+          label: Value
+          value: 60
+          help: Provide value for each label. It should be number. Eg. 100
+
+        - name: background_color
+          type: color
+          label: Background Color
+
+        - name: border_color
+          type: color
+          label: Border Color
+
+      value:
+        - label : Coffee
+
+  styles:
+
+    - name: enable_responsive
+      type: switch
+      value: true
+      label: Responsive Chart
+
+    - name: width
+      type: slider
+      max: 1200
+      value: 300
+      suffix: px
+      help: Chart width in px.
+      depends:
+        enable_responsive : false
+
+    - name: height
+      type: slider
+      max: 1200
+      value: 300
+      suffix: px
+      help: Chart height in px.
+      depends:
+        enable_responsive : false
+
+    - name: enable_border
+      type: switch
+      label: Enable Border
+
+    - name: border_width
+      type: slider
+      max: 20
+      value: 1
+      suffix: px
+      label: Border Width in px.
+      depends:
+        enable_border : true
+
+    - name: padding
+      type: padding
+
+    - name: margin
+      type: margin

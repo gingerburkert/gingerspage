@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="attribs">
+		<fieldset name="pagebuilderck" hidden="true">
+			<field 
+				name="pagebuilderck_editor"
+				type="hidden"
+				default="0"
+			/>
+		</fieldset>
+	</fields>
+</form>

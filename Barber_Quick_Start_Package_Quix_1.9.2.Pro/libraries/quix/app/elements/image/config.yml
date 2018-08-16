@@ -1,0 +1,111 @@
+name: Image
+slug: image
+groups: content
+
+form:
+  general:
+    - name: image
+      type: file-manager
+      label: Image Url
+      help: Upload your desired image, or type in the URL to the image you would like to display.
+
+    - name: alt_text
+      type: text
+      depends:
+        image: '*'
+
+    - name: title_text
+      type: text 
+      depends:
+        image: '*'
+
+    - name: responsive_image
+      type: switch
+      lable: Responsive Image
+
+    - name: alignment
+      type: select
+      value: center
+      label: Image Alignment
+      options:
+        left: Left
+        center: Center
+        right: Right
+      depends:
+        responsive_image: false
+      image: true 
+      responsive: true
+
+    - name: link
+      type: link
+      value:
+        url:
+        target:
+      help: If you would like your image to be a link, input your destination URL here. No link will be created if this field is left blank.
+
+    - name: image_width
+      type: slider
+      max: 1000
+      suffix: px
+      responsive: true
+
+    - name: image_height
+      type: slider
+      max: 1000
+      suffix: px
+      responsive: true
+
+  styles:
+    - name: open_lightbox
+      type: switch
+      label: Open In Lightbox
+
+    - name: margin
+      type: margin
+
+    - name: border
+      type: switch
+      label: Use Border
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      value: 2
+      suffix: px
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      value: 3
+      suffix: px
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: border_hover_color
+      type: color
+      label: Border Hover Color
+      depends:
+        border: true

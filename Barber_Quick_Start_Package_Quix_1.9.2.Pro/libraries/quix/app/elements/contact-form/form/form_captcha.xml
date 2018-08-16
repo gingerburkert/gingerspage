@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="basic">
+
+    <field
+      name="captcha"
+      type="captcha"
+      label="Captcha"
+      description="Would you like to use captcha?"
+      validate="captcha"
+    />
+
+  </fieldset>
+</form>

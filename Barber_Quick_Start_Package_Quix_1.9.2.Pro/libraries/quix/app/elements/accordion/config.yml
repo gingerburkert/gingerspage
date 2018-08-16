@@ -1,0 +1,118 @@
+name: Accordion
+slug: accordion
+groups: interactive
+form:
+  general:
+    - name: accordions
+      type: group-repeater
+      schema:
+        - name: title
+          value: Accordion Title
+
+        - name: content
+          type: editor
+          value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+        - name: enable_icon
+          type: switch
+
+        - name: icon
+          type : icon
+          help: Icon will visible left to the title
+          depends:
+            enable_icon : true
+      value:
+        - title: Accordion Title
+          content: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos
+
+    - name: type
+      type: select
+      value: accordion
+      label: Accordion Type
+      help: Accordion - open one section at a time. Expandable - multiple sections to stay open.
+      options:
+        accordion: Accordion
+        expandable: Expandable
+
+    - name: first_collapse
+      type: switch
+      label: Collapse First Item
+
+  styles:
+    - name: title_style
+      type: divider
+      label: Title Style - Common
+
+    - name: header_font
+      type: typography
+      label: Font
+
+    - name: header_bg_color
+      type: color
+      label: Background
+
+    - name: header_text_color
+      type: color
+      label: Text Color
+
+    - name: title_margin
+      type: margin
+      responsive: true
+
+    - name: title_padding
+      type: padding
+      responsive: true
+
+    - name: body
+      type: divider
+      label: Content Style - Common
+
+    - name: body_font
+      type: typography
+      label: Font
+
+    - name: body_bg_color
+      type: color
+      label: Background
+
+    - name: body_text_color
+      type: color
+      label: Text Color
+
+    - name: body_padding
+      type: padding
+      responsive: true
+
+    - name: body_margin
+      type: margin
+      responsive: true
+
+    - name: icon
+      type: divider
+      label: Icon Style - Common
+
+    - name: icon_font_size
+      type: slider
+      responsive: true
+      lable: Font Size
+      value : 20
+      suffix: px
+
+    - name: icon_color
+      type: color
+      label: Color
+
+    - name: element
+      type: divider
+      label: Element Style - Apply On Element Body
+
+    - name: border_color
+      type: color
+      label: Border Color
+      help: Apply on every accordion item body.
+    
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

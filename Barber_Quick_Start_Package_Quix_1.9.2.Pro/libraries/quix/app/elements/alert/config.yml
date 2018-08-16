@@ -1,0 +1,109 @@
+name: Alert
+slug: alert
+groups: content
+form:
+  general:
+    - name: content
+      type: editor
+      value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+    - name: alert_style
+      type: select
+      label: Alert Type
+      value: info
+      options:
+       success: Success
+       info: Info
+       warning: Warning
+       danger: Danger
+
+    - name: show_close
+      type: switch
+      label: Close Icon
+
+    - name: alignment
+      type: select
+      value: left
+      label: Text Alignment
+      options:
+        left: Left
+        center: Center
+        right: Right
+        justify: Justify
+      image: true
+      responsive: true 
+
+  styles:
+    - name: font
+      type: typography
+
+    - name : box_shadow_divider
+      type : divider 
+      label : Box Shadow 
+
+    - name : box_shadow
+      type : switch
+      label : Enable Box Shadow   
+
+    - name : box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_blur
+      type : slider
+      label : Blur 
+      min : 0
+      max : 200
+      step : 1
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_spread
+      type : slider
+      label : Spread 
+      min : 0
+      max : 200
+      step : 1
+      suffix : px
+      depends:
+        box_shadow : true  
+
+    - name : box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      step : 1
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      step : 1
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        box_shadow : true     
+
+    - name : element
+      type : divider
+      label : Element Style - Apply On Element Body
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

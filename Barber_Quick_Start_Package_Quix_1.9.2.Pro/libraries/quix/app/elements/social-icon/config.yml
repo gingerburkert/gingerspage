@@ -1,0 +1,146 @@
+name: Social Icon
+slug: social-icon
+groups: social
+
+form:
+  general:
+    - name: socialicons
+      type: group-repeater
+      schema:
+        - name: social_url
+          type: link
+          help: Your social profilr link
+
+        - name: icon
+          type: icon
+      value:
+        - social_url:
+            text : Twitter
+            url :
+            target:
+
+    - name: layout
+      type: select
+      value: horizontal
+      options:
+        horizontal: Horizontal
+        vertical: Vertical
+
+    - name: width
+      type: slider
+      max: 200
+      value: 40
+      suffix: px
+      responsive: true
+      
+    - name: height
+      type: slider
+      max: 200
+      value: 40
+      suffix: px
+      responsive: true
+
+    - name: alignment
+      type: select
+      value: left
+      label: Alignment
+      image: true 
+      responsive: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+  style:
+    - name: icon_style
+      type: divider
+    
+    - name: font_size
+      type: slider
+      value: 14
+      suffix: px
+      label: Font Size
+      responsive: true
+
+    - name: line_height
+      type: slider
+      value: 40
+      suffix: px
+      label: Line Height
+      responsive: true
+
+    - name: icon_color
+      type: color
+      label: Color
+
+    - name: icon_bg
+      type: color
+      label: Background
+
+    - name: icon_hover_color
+      type: color
+      label: Hover Color 
+
+    - name: icon_hover_bg
+      type: color
+      label: Hover Background
+
+    - name: icon_padding
+      type: padding
+      label: Padding
+
+    - name: border
+      type: switch
+      label: Border Styling
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      value: 2
+      suffix: px
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      value: 3
+      suffix: px
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: border_hover_color
+      type: color
+      label: Border Hover Color
+      depends:
+        border: true
+
+    - name : element_style
+      type: divider
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

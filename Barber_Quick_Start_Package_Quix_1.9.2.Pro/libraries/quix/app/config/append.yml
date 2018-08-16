@@ -1,0 +1,156 @@
+animation:
+  - name: entrance
+    type: divider
+    label: Entrance Animation - Parent
+
+  - name: animation
+    type: select
+    value: 0
+    label: Animation Type
+    help: Live example of all animations is here - bit.ly/quix-demo
+    options:
+      0: None
+      fadeIn : Fade In
+      fadeInDown : Fade In Down
+      fadeInLeft : Fade In Left
+      fadeInRight : Fade In Right
+      fadeInUp : Fade In Up
+      bounceIn : Bounce In
+      bounceInDown : Bounce In Down
+      bounceInLeft : Bounce In Left
+      bounceInRight : Bounce In Right
+      bounceInUp : Bounce In Up
+      slideInUp : Slide In Up
+      slideInDown : Slide In Down
+      slideInLeft : Slide In Left
+      slideInRight : Slide In Right
+      rotateIn : Rotate In
+      rotateInDownLeft : Rotate In Down Left
+      rotateInDownRight : Rotate In Down Right
+      rotateInUpLeft : Rotate In Up Left
+      rotateInUpRight : Rotate In Up Right
+      zoomIn : Zoom In
+      zoomInDown : Zoom In Down
+      zoomInLeft : Zoom In Left
+      zoomInRight : Zoom In Right
+      zoomInUp : Zoom In Up
+      flipInX : Flip In X
+      flipInY : Flip In Y
+      lightSpeedIn : Light Speed In
+      rollIn : Roll In
+  
+  - name: animation_delay
+    type: slider
+    min: 0.1
+    max: 5
+    step: 0.1
+    value: 0.1
+    help: Animation delay in second.
+    depends:
+      animation: '*'
+
+  - name: hover
+    type: divider
+    label: Hover Animation - Parent
+
+  - name: hover_animation
+    type: select
+    label: Animation Type
+    value: 0
+    help : Shadow animation will reveal more settings. Live example of all animations is here - bit.ly/quix-demo
+    options:
+      0 : None
+      pulse : Pulse
+      pulse-grow: Pulse Grow
+      buzz : Buzz
+      buzz-out : Buzzon Out
+      hang : Hang
+      bob : Bob
+      grow : Grow
+      shrink : Shrink
+      pulse-shrink : Pulse Shrink
+      push : Push
+      pop : Pop
+      bounce-in : Bounce In
+      bounce-out : Bounce Out
+      grow-rotate : Grow Rotate
+      wobble-vertical : Wobble Vertical
+      wobble-horizontal : Wobble Horizontal
+      wobble-top : Wobble Top
+      wobble-bottom : Wobble Bottom
+      wobble-to-bottom-right : Wobble Bottom Right
+      wobble-to-top-right : Wobble Top Right
+      wobble-skew : Wobble Skew
+      shadow : Shadow
+
+  - name : hover_shadow
+    type : divider
+    label: Hover Shadow Style
+    depends:
+      hover_animation : 'shadow'
+
+  - name : hover_shadow_color
+    type : color 
+    label : Color 
+    depends:
+      hover_animation : 'shadow'
+
+  - name : hover_shadow_blur
+    type : slider
+    label : Blur 
+    min : 0
+    max : 200
+    suffix : px
+    depends:
+      hover_animation : 'shadow'
+
+  - name : hover_shadow_spread
+    type : slider
+    label : Spread 
+    min : 0
+    max : 200
+    suffix : px
+    depends:
+      hover_animation : 'shadow' 
+
+  - name : hover_shadow_horizontal
+    type : slider
+    label : Horizontal 
+    min : -250
+    max : 250
+    suffix : px
+    depends:
+      hover_animation : 'shadow'
+
+  - name : hover_shadow_vertical
+    type : slider
+    label : Vertical 
+    min : -250
+    max : 250
+    suffix : px
+    depends:
+      hover_animation : 'shadow'
+
+  - name: hover_scale_enabled 
+    type: switch
+    label: Enable Scaling
+    depends:
+      hover_animation : 'shadow'
+
+  - name : hover_shadow_scale
+    type : slider
+    label : Scale 
+    min : 0
+    max : 5
+    step : 0.01
+    value: 1
+    depends:
+      hover_scale_enabled : true
+
+advanced:
+  - name : identifier
+    type : divider
+
+  - name: label
+  - name: id
+  - name: class

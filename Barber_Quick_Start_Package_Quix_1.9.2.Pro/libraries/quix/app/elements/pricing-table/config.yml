@@ -1,0 +1,393 @@
+name: Pricing Table
+slug: pricing-table
+groups:
+form:
+  general:
+    - name: pricing
+      type: group-repeater
+      schema:
+        - name: package
+          type: text
+          label: Package Title
+          help: Input Package name.
+          value: Standard
+
+        - name: featured
+          type: switch
+          help: Make this table featured
+
+        - name: featured_text
+          type: text
+          value: Popular
+          depends:
+            featured: true
+
+        - name: description
+          type: text
+          label: Package Description
+          help: Package short info or leave it blank.
+          value: Lorem ips illud nonummy, novum tation et his.
+
+        - name: curency
+          type: text
+          help: Input curency symbol here.
+          value: $
+
+        - name: amount
+          type: text
+          help: Input price.
+          value: 99
+
+        - name: plantype
+          type: text
+          help: Input plan type monthly/yearly or leave it blank.
+          value: Month
+          label: Plan Type
+
+        - name: featurelist
+          type: editor
+          label: Feature List
+          help: Add you're all feature in a bullet list .
+
+        - name: button
+          type: link
+          value:
+            text: Buy Now
+            url:
+            target:
+
+        - name: btn_icon
+          type: icon
+          label: Button Icon
+
+        - name: btn_icon_placement
+          type: select
+          value: left
+          label: Icon Placement
+          options:
+            left: Left
+            right: Right
+
+        - name: btntype
+          type: select
+          value: regular
+          label: Button Type
+          options:
+            regular: Regular
+            block: Full Width
+
+        - name: btnstyle
+          type: select
+          value: qx-btn-default
+          label: Button Style
+          options:
+            qx-btn-default: Default
+            qx-btn-primary: Primary
+            qx-btn-success: Success
+            qx-btn-info: Info
+            qx-btn-warning: Warning
+            qx-btn-danger: Danger
+            qx-btn-link: Link
+
+      value:
+        - title: Title
+          content: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos
+
+  styles:
+    - name: divider-global
+      type: divider 
+      label: Global Settings
+
+    - name: alignment
+      type: select
+      value: center
+      label: Text Alignment
+      image: true 
+      responsive: true 
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+    - name: text_color
+      type: color
+      label: Text Color
+
+    - name: bg_color
+      type: color
+      label: Background Color
+
+    - name: border
+      type: switch
+      label: Use Border
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      value: 2
+      suffix: px
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      value: 3
+      suffix: px
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: single_table_max_width
+      type: slider
+      suffix: px
+      step: 0.1
+      value: 450
+      max: 1000
+      label: Single Table Max Width
+      responsive: true
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+
+    - name: featured_style
+      type: divider
+      label: Featured Style
+
+    - name: featured_bg_color
+      type: color
+      label: Featured BG Color
+
+    - name: featured_color
+      type: color
+      label: Featured Text Color
+
+    - name: featured_font
+      type: typography
+      label: Featured Title Font
+
+    - name: featured_height
+      type: slider
+      max: 200
+      suffix: px
+      label: Featured Height
+      responsive: true
+
+    - name: featured_margin
+      type: margin
+      label: Featured Margin
+
+    - name: divider-heading
+      type: divider 
+      label: Table Heading
+
+    - name: table_heading_bg_color
+      type: color
+      label: Background Color
+
+    - name: heading_padding
+      type: padding
+      label: Padding
+
+    - name: title_font
+      type: typography
+      label: Font
+
+    - name: title_margin
+      type: margin
+
+    - name: title_color
+      type: color
+      label: Text Color
+
+    - name: description_font
+      type: typography
+      label: Description Font
+      
+    - name: description_margin
+      type: margin
+
+    - name: description_color
+      type: color
+      label: Description Color
+
+    - name: curency_font
+      type: typography
+      label: Package Curency Font
+
+    - name: curency_color
+      type: color
+      label: Curency Color
+
+    - name: amount_font
+      type: typography
+      label: Package Amount Font
+
+    - name: amount_color
+      type: color
+      label: Amount Color
+
+    - name: plan_font
+      type: typography
+      label: Package Plan Type Font
+    
+    - name: plan_color
+      type: color
+      label: Plan Color
+
+    - name: divider-body
+      type: divider 
+      label: Table Body
+
+    - name: table_body_bg_color
+      type: color
+      label: Background Color
+
+    - name: body_font
+      type: typography
+      label: Font
+      value:
+
+    - name: body_padding
+      type: padding
+      label: Padding
+
+    - name: li_border
+      type: switch
+      label: Use Border
+
+    - name: li_border_width
+      type: slider
+      label: Border Width
+      value: 2
+      suffix: px
+      depends:
+        li_border: true
+
+    - name: li_border_style
+      type: select
+      value: solid
+      depends:
+        li_border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: li_border_color
+      type: color
+      label: Border Color
+      depends:
+        li_border: true
+
+    - name: body_list_item_padding
+      type: padding
+      label: Feature Padding
+
+    - name: divider-footer
+      type: divider 
+      label: Table Footer
+
+    - name: table_footer_bg_color
+      type: color
+      label: Background Color
+
+    - name: footer_padding
+      type: padding
+      label: Padding
+
+    - name: button_style
+      type: switch
+      label: Button Style
+
+    - name: button_font
+      type: typography
+      label: Button Font
+      depends: 
+        button_style: true
+
+    - name: button_bg
+      type: color
+      label: Backgound Color
+      depends:
+        button_style : true
+
+    - name: button_text
+      type: color
+      label: Text Color
+      depends:
+        button_style : true
+
+    - name: button_border_width
+      type: slider
+      suffix: px
+      label: Border Width
+      depends:
+        button_style : true
+
+    - name: button_border_color
+      type: color
+      label: Border Color
+      depends:
+        button_style : true
+
+    - name: button_border_radius
+      type: slider
+      suffix: px
+      label: Border Radius
+      depends:
+        button_style : true
+
+    - name: button_bg_hover
+      type: color
+      label: Hover Backgound Color
+      depends:
+        button_style : true
+
+    - name: button_text_hover
+      type: color
+      label: Hover Text Color
+      depends:
+        button_style : true
+
+    - name: button_border_color_hover
+      type: color
+      label: Hover Border Color
+      depends:
+        button_style : true
+
+    - name: button_padding
+      type: padding
+      label: Button Padding
+      depends:
+        button_style : true
+
+    

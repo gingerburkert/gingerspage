@@ -1,0 +1,64 @@
+name: Bar Counter
+slug: bar-counter
+groups: interactive
+
+form:
+  general:
+    - name: barcounters
+      type: group-repeater
+      schema: 
+        - name: title
+          type: text
+          help: Title of the bar.
+          value: HTML
+
+        - name: percent 
+          type: text
+          help: Progress percentage of the bar. Input only number.
+          value: 60
+
+        - name: bar_color
+          type: color 
+          help: Background color of the bar.
+        
+        - name: percentage_color
+          type: color
+          help: Percentage Text color of the bar.
+        
+        - name: bar_type
+          type: select
+          value: default
+          options:
+            default : Default
+            qx-progress-bar-striped : Striped
+            qx-progress-bar-striped qx-active : Striped Animated
+      value:
+        - title: HTML
+          percent: 60
+
+  styles:
+
+    - name: title_font
+      type: typography
+      label: Font
+
+    - name: border_radius
+      type: slider
+      value: 0
+      suffix: px
+
+    - name: thikness
+      type: slider
+      value: 20
+      suffix: px
+
+    - name: element
+      type: divider
+      label: Element Style - Apply On Element Body
+    
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+

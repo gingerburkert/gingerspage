@@ -1,0 +1,100 @@
+name: Call To Action
+slug: call-to-action
+groups:
+form:
+  general:
+    - name: title
+    
+    - name: description
+      type: editor
+
+    - name: button
+      type: link
+
+    - name: style
+      type: select
+      label: Button Style
+      value: qx-btn-default
+      options:
+        qx-btn-default: Default
+        qx-btn-primary: Primary
+        qx-btn-success: Success
+        qx-btn-info: Info
+        qx-btn-warning: Warning
+        qx-btn-danger: Danger
+        qx-btn-link: Link
+
+  styles:
+    - name: style_select
+      type: select
+      value: style_1
+      label: Select Style
+      options:
+        style_1: Grid
+        style_2: Stacked
+
+    - name: alignment
+      type: select
+      value: left
+      options:
+        left: Left
+        center: Center
+        right: Right
+      depends: 
+        style_select : 'style_2'
+      image: true 
+      responsive: true
+
+    - name: title_style
+      type: divider
+      label: Title Style
+
+    - name: title_font
+      type: typography
+      label: Font
+
+    - name: title_color
+      type: color
+      label: Color
+
+    - name: title_margin
+      type: margin
+      label: Margin
+
+    - name: desc_style
+      type: divider
+      label: Description Style
+
+    - name: description_font
+      type: typography
+      label: Font
+
+    - name: description_color
+      type: color
+      label: Color
+
+    - name: button_style
+      type: divider
+      label: Button Style
+
+    - name: button_font
+      type: typography
+      label: Font
+
+    - name: btn_margin
+      type: margin
+      label: Margin
+
+    - name: element
+      type: divider
+      label: Element Style - Parent
+
+    - name: bg_color
+      type: color
+      lable: Backgound Color
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

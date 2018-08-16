@@ -1,0 +1,46 @@
+name: Pie Counter
+slug: pie-counter
+groups: interactive
+
+form:
+  general:
+    - name: title
+      type: text
+      help: Input a title for your bar.
+      value: Pie Counter Title
+
+    - name: percent 
+      type: text
+      help: Define a percentage for this bar.
+      value: 60
+
+    - name: percent_sign
+      type: switch
+
+  styles:
+    - name: title_style
+      type: divider
+
+    - name: title_font
+      type: typography
+
+    - name: title_color
+      type: color 
+
+    - name: track_color
+      type: color 
+      label: Track Background
+
+    - name: bar_color
+      type: color 
+      label: Progress Bar Color
+    
+    - name: percentage_color
+      type: color
+      label: Percentage Sign Color
+
+    - name: line_width
+      type: slider
+      value: 5
+      max: 20
+      suffix: px

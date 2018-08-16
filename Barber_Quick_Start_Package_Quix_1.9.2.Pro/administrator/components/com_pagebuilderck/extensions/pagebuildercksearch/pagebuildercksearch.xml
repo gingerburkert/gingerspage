@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="plugin" group="search" method="upgrade">
+	<name>PLG_SEARCH_PAGEBUILDERCKSEARCH</name>
+	<creationDate>Februar 2016</creationDate>
+	<copyright>Copyright (C) 2016. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<author>Cedric Keiflin</author>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>1.0.1</version>
+	<description>Search plugin for Page Builder CK</description>
+	<files>
+		<filename plugin="pagebuildercksearch">pagebuildercksearch.php</filename>
+		<folder>language</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_search_pagebuildercksearch.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_search_pagebuildercksearch.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.plg_search_pagebuildercksearch.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.plg_search_pagebuildercksearch.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="search_limit" type="text"
+					default="50"
+					description="PLG_SEARCH_PAGEBUILDERCKSEARCH_SEARCHLIMIT_DESC"
+					label="PLG_SEARCH_PAGEBUILDERCKSEARCH_SEARCHLIMIT_LABEL"
+					size="5"
+				/>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

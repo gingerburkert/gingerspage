@@ -1,0 +1,10 @@
+name: Video
+slug: video
+groups: content
+form:
+  general:
+    - name: video_url
+      type: text
+      label: Video Url 
+      help : Insert YouTube or Vimeo video Url here.
+    

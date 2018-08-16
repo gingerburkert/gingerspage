@@ -1,0 +1,14 @@
+2.2.3 - 04/05/18
+- ajoute verif si fichier composant existe
+
+2.2.2 - 26/04/18
+- add min-width limit in responsive resolutions to avoid overlapping
+
+2.2.1 - 09/03/18
+- fix issue with responsive
+
+2.2.0 - 04/03/18
+- add compatibility with 2.2.0 : css compile option
+
+2.0.1 - 18/12/17
+- fix issue with css reponsive, remove important on display block and add important on display none

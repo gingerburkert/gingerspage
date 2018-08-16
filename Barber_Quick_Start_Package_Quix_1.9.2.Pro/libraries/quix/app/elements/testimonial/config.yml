@@ -1,0 +1,87 @@
+name: Testimonial
+slug: testimonial
+groups: content
+form:
+  general:
+
+    - name: name
+      value: John Doe
+
+    - name: company
+      help: Put designation and company name here. Eg, Creative Director, ThemeXpert 
+      label: Job Title, Company Name
+      value: CEO, Acme INC.
+
+    - name: image
+      type: file-manager
+
+    - name: testimony
+      type: editor
+      value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+  styles:
+    - name: image_style
+      type: divider
+
+    - name: image_style
+      type: select
+      value: square
+      lable: Image Style 
+      options:
+        img-square : Square
+        img-rounded: Rounded 
+        img-circle : Circle
+
+    - name: image_margin
+      type: margin
+
+    - name: title_style
+      type: divider
+
+    - name: title_font
+      type: typography
+
+    - name: title_color
+      type: color
+
+    - name: title_margin
+      type: margin
+
+    - name: designation_style
+      type: divider
+
+    - name: designation_font
+      type: typography
+
+    - name: designation_color
+      type: color
+
+    - name: content_style
+      type: divider
+
+    - name: font
+      type: typography
+
+    - name: text_color
+      type: color
+      label: Text Color
+
+    - name: content_margin
+      type: margin
+
+    - name: global_style
+      type: divider
+
+    - name: bg_color
+      type: color
+      label: Background Color
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+
+
+
+

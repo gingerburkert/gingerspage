@@ -1,0 +1,74 @@
+name: Tabs
+slug: tabs
+groups: interactive
+form:
+  general:
+    - name: tabs
+      type: group-repeater
+      schema:
+        - name: title
+          value: Tab Title
+
+        - name: content
+          type: editor
+          value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+        - name: enable_icon
+          type: switch
+
+        - name: icon 
+          type : icon 
+          depends:
+            enable_icon : true
+      value:
+        - title: Tab Title
+          content: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+  styles:
+    - name: element_styles
+      type: divider
+
+    - name: title_fonts
+      type: typography
+      label: Title Font
+
+    - name: fonts
+      type: typography
+      label: Content Font
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+
+    - name: nav_styles
+      type: divider
+
+    - name: nav_active_bg
+      type: color
+      label: Active Background Color
+
+    - name: nav_text
+      type: color
+      label: Text Color
+
+    - name: nav_active_text
+      type: color
+      label: Active Text Color
+
+    - name: nav_border_color
+      type: color
+      label: Border Color
+
+    - name: body_styles
+      type: divider
+
+    - name: body_bg_color
+      type: color
+      label: Background
+
+    - name: body_text_color
+      type: color
+      label: Text Color
+
+    

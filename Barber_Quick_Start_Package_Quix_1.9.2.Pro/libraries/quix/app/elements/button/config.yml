@@ -1,0 +1,197 @@
+name: Button
+slug: button
+groups: content
+form:
+  general:
+    - name: button
+      type: link
+
+    - name: alignment
+      type: select
+      value: left
+      options:
+        left: Left
+        center: Center
+        right: Right
+      image: true 
+      responsive: true
+
+    - name: icon
+      type: icon
+
+    - name: icon_placement
+      type: select
+      value: left
+      options:
+        left: Left
+        right: Right
+
+    - name: type
+      type: select
+      value: regular
+      options:
+        regular: Regular
+        fullwidth: Full Width
+
+    - name: style
+      type: select
+      value: qx-btn-default
+      options:
+        qx-btn-default: Default
+        qx-btn-primary: Primary
+        qx-btn-success: Success
+        qx-btn-info: Info
+        qx-btn-warning: Warning
+        qx-btn-danger: Danger
+        qx-btn-link: Link
+
+  styles:
+    - name: font
+      type: typography
+
+    - name: color_styles
+      type: divider
+      label: Colors 
+
+    - name: text_color
+      type: color
+      label: Text Color
+
+    - name: bg_color
+      type: color
+      label: Background Color
+
+    - name: bg_color_hover
+      type: color
+      label: Hover Background Color
+
+    - name: text_color_hover
+      type: color
+      label: Hover Text Color
+
+    - name: element
+      type: divider
+      label: Element Style - Apply On Element Body
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+
+    - name : border_boxshadow
+      type: divider
+      label: Border & Box Shadow
+
+    - name: border
+      type: switch
+      label: Border Styling
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      value: 2
+      suffix: px
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      value: 3
+      suffix: px
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: border_hover_color
+      type: color
+      label: Border Hover Color
+      depends:
+        border: true
+
+    - name : box_shadow
+      type : switch
+      label : Enable Box Shadow   
+
+    - name : box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true  
+
+    - name : box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        box_shadow : true    
+
+    - name: icon_style
+      type: divider
+      label: Icon Style
+
+    - name: button_icon_color
+      type: color
+      label: Icon Color
+
+    - name: button_icon_color_hover
+      type: color
+      label: Icon Hover Color
+
+    - name: icon_margin
+      type: margin

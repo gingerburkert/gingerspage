@@ -1,0 +1,72 @@
+name: Divider/Spacer
+slug: divider
+groups: content
+
+form:
+  general:
+    - name: divider
+      type: switch
+      label: Show Divider
+      help: This settings turns on and off the 1px divider line, but does not affect the divider height.
+
+    - name: color
+      type: color
+      help: This will adjust the color of the 1px divider line.
+      depends:
+        divider: true
+
+    - name: border 
+      type: switch 
+      depends:
+        divider: true
+
+    - name: divider_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: divider_width
+      type: slider
+      label: Border Width
+      min: 1
+      value: 2
+      suffix: px
+      depends:
+        divider: true
+
+    - name: divider_center
+      type: switch
+      label: Center Divider
+      depends:
+        divider: true
+      help: This settings place divider line center of its height.
+
+    - name: height
+      type: slider
+      value: 30
+      responsive: true
+      help: Define how much space should be added below the divider.
+
+    - name: enable_width
+      type: switch
+
+    - name: width
+      type: slider
+      max: 500
+      suffix: px
+      responsive: true
+      depends: 
+        enable_width: true
+
+    - name: margin 
+      type: margin

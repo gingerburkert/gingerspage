@@ -1,0 +1,49 @@
+name: Facebook Likebox
+slug: facebook-likebox
+groups: social
+form:
+  general:
+    - name: fb_app_id
+      type: text
+      label: Facebook App ID
+      help: Optional - Create your App ID by following this url https://developers.facebook.com/apps and enter it here.
+
+    - name: fb_page_url
+      type: text
+      value: https://www.facebook.com/themexpert/
+      help: Enter the URL of your facebook fanpage.
+
+    - name: show_timeline
+      type: switch
+
+    - name: box_width
+      type: slider
+      max: 800
+      min: 100
+      suffix: px
+      value: 340
+
+    - name: box_height
+      type: slider
+      max: 1000
+      min: 70
+      suffix: px
+      value: 500
+
+    - name: alignment
+      type: select
+      value: left
+      label: Text Alignment
+      options:
+        left: Left
+        center: Center
+        right: Right
+      image: true 
+      responsive: true
+
+  styles:
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

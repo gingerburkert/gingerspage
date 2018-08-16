@@ -1,0 +1,156 @@
+name: Video PopUp
+slug: video-popup
+groups: [content, interactive]
+form:
+  general:
+    - name: video_link 
+      label: Video Link
+      type: text
+
+    - name: trigger_type
+      type: select
+      value: image
+      label: Trigger by
+      options:
+        image: Image
+        icon: Icon
+        button: Button
+
+    - name: image
+      type: file-manager
+      help: Preview image
+      depends:
+        trigger_type: image
+
+    - name: icon_text
+      type: text
+      label: Text
+      depends:
+        trigger_type: [icon, image]
+
+    - name: icon
+      type: icon
+      depends:
+        trigger_type: icon
+
+    - name: button
+      type: text
+      value: View Video
+      depends:
+        trigger_type: button
+
+    - name: btntype
+      type: select
+      value: regular
+      label: Button Type
+      depends:
+        trigger_type: button
+      options:
+        regular: Regular
+        block: Full Width
+
+    - name: btnstyle
+      type: select
+      value: qx-btn-default
+      label: Button Style
+      depends:
+        trigger_type: button
+      options:
+        qx-btn-default: Default
+        qx-btn-primary: Primary
+        qx-btn-success: Success
+        qx-btn-info: Info
+        qx-btn-warning: Warning
+        qx-btn-danger: Danger
+        qx-btn-link: Link
+
+  styles:
+    - name: alignment
+      type: select
+      value: left
+      label: Text Alignment
+      image: true 
+      responsive: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+    - name: text_font
+      type: typography
+      lable: Text Font
+
+    - name: text_color
+      type: color 
+      labe: Text Color 
+
+    - name: button_style
+      type: switch
+      label: Use Custom Style For Button
+      depends: 
+        trigger_type: button
+
+    - name: button_bg
+      type: color
+      label: Button Backgound Color
+      depends:
+        button_style : true
+
+    - name: button_text
+      type: color
+      label: Button Text Color
+      depends:
+        button_style : true
+
+    - name: button_border_width
+      type: slider
+      label: Button Border Width
+      suffix: px
+      depends:
+        button_style : true
+
+    - name: button_border_color
+      type: color
+      label: Button Border Color
+      depends:
+        button_style : true
+
+    - name: button_border_radius
+      type: slider
+      label: Button Border Radius
+      suffix: px
+      depends:
+        button_style : true
+
+    - name: button_bg_hover
+      type: color
+      label: Button Hover Backgound Color
+      depends:
+        button_style : true
+
+    - name: button_text_hover
+      type: color
+      label: Button Hover Text Color
+      depends:
+        button_style : true
+
+    - name: button_border_color_hover
+      type: color
+      label: Button Hover Border Color
+      depends:
+        button_style : true
+
+    - name: button_padding
+      type: padding
+      label: Button Padding
+      depends:
+        button_style : true
+
+    - name: global_style
+      type: divider
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

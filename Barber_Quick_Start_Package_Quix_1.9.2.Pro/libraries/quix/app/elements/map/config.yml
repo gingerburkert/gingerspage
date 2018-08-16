@@ -1,0 +1,55 @@
+name: Google Map
+slug: map
+groups:
+form:
+  general:
+
+    - name: api
+      type: text
+      label: API Key
+      help : Insert your google maps javascript api key here.
+
+    - name: latitude
+      type: text
+      value: 23.8103
+      label: Latitude 
+      help : Insert your location latitude coordinates.
+
+    - name: longitude
+      type: text
+      value: 90.4125
+      label: Longitude 
+      help : Insert your location longitude coordinates.
+
+    - name: image
+      type: file-manager
+      label: Marker Image
+      help: Upload your map marker image.
+
+    - name: zoom
+      type: slider
+      min: 1
+      max: 25
+      value: 10
+      label: Zoom
+      help: Select map zoom level.
+
+    - name: scrollwheel
+      type: switch
+      label: Scroll Wheel
+      help: If you want to enable scroll wheel option in map. Check Yes.
+
+    - name: maptypecontrol
+      type: switch
+      value: true
+      label: Map Type Control
+
+    - name: navigationcontrol
+      type: switch
+      value: true
+      label: Navigation Control
+
+    - name: streetviewcontrol
+      type: switch
+      value: true
+      label: street View Control

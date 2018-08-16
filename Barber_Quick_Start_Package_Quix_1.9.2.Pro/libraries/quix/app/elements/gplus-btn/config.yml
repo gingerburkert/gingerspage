@@ -1,0 +1,38 @@
+name: Google Plus Button
+slug: gplus-btn
+groups: social
+form:
+  general:
+    - name: button_size
+      type: select
+      value: medium
+      options:
+       small: Small
+       medium: Medium
+       standard: Standard
+       tall: Tall
+
+    - name: button_annotation
+      type: select
+      value: bubble
+      options:
+       none: none
+       bubble: bubble
+       inline: inline
+
+    - name: alignment
+      type: select
+      value: left
+      label: Text Alignment
+      image: true
+      options:
+        left: Left
+        center: Center
+        right: Right
+
+  styles:
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

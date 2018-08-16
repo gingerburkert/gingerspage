@@ -1,0 +1,23 @@
+name: Flickr
+slug: flickr
+groups: social
+form:
+  general:
+    - name: user_id
+      type: text
+      value: 72104662@N04
+      label: Flickr ID
+      help: Enter flickr ID here. To find your flickr ID visit http://idgettr.com
+
+    - name: count
+      type: text
+      value: 6
+      help: Set the number of photos you want to display.
+
+  styles:
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding

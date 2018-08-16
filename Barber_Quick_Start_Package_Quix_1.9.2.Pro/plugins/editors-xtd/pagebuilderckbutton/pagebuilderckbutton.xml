@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Button - Pagebuilder CK</name>
+	<author>Cédric KEIFLIN</author>
+	<creationDate>August 2015</creationDate>
+	<copyright>Cédric KEIFLIN</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>2.0.0</version>
+	<description>Button - Pagebuilder CK. Manage the pages into the editor.</description>
+	<files>
+		<filename plugin="pagebuilderckbutton">pagebuilderckbutton.php</filename>
+	</files>
+</extension>

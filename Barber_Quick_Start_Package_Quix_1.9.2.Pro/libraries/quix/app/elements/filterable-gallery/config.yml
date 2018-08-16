@@ -1,0 +1,59 @@
+name: Filterable Gallery
+slug: filterable-gallery
+groups: [content, interactive]
+
+form:
+  general:
+    - name: galleries
+      type: group-repeater
+      schema: 
+        - name: title
+          type: text
+          value: Gallery Item
+
+        - name: image
+          type: file-manager
+
+        - name: description
+          type: editor
+        
+        - name: link
+          value: '#'
+        
+        - name: tags
+          help: Seperate tag with comma(,) NO SPACE.
+
+      value:
+        - title: Gallery Item
+          tags: joomla,wordpress
+
+    - name: columns
+      type: select 
+      value: 3
+      options:
+        1 : 1 Column
+        2 : 2 Columns
+        3 : 3 Columns
+        4 : 4 Columns
+        6 : 6 Columns
+
+    - name: title_enabled
+      type: switch
+      label: Show Title
+
+    - name: description_enabled
+      type: switch
+      label: Show Description
+
+  styles:
+    - name: lightbox_enabled
+      type: switch
+      value: true
+      label: Enable Lightbox
+
+    - name: content_position
+      type: select
+      value: bottom 
+      options: 
+        bottom: Bottom of Image 
+        overlay: Overlay 

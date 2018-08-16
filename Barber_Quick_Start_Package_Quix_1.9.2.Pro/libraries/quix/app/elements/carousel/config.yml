@@ -1,0 +1,212 @@
+name: Carousel
+slug: carousel
+groups: [content, interactive]
+form:
+  general:
+    - name: carousels
+      type: group-repeater
+      schema: 
+        - name: title
+          value: Carousel Title
+
+        - name: image
+          type: file-manager
+          
+        - name : link
+          type: link
+          lable: Link Image
+          value:
+            url:
+            target:
+
+        - name: caption
+          type: text
+
+      value:
+        - title: Carousel 1
+          caption: Lorem ipsum dolor sit amet timeam deleniti mnesarchum
+
+    - name: slides_count
+      type: slider 
+      value: 4
+      label: Slides To Show 
+      help: Number of slides to show at a time
+      responsive: true
+
+    - name: slides_scroll
+      type: slider
+      value: 1
+      label: Slides To Scroll
+      help: Number of slides to scroll at a time
+      responsive: true
+    
+    - name: slides_space
+      type: slider
+      value: 30
+      label: Space Between Items
+      responsive: true
+
+    - name: enable_title_caption
+      type: switch
+      label: Show Title & Caption 
+    
+    - name: arrows
+      type: switch
+      value: true
+      help: This setting allows you to turn the navigation arrows on or off.
+
+    - name: dots
+      type: switch
+      label: Dots Navigation 
+      value: false
+      help: Disabling this option will remove the circle button at the bottom of the slider.
+
+    - name: loop
+      type: switch
+      label: Continuous Slide
+      
+    - name: autoplay
+      type: switch
+      labe: Auto Play
+      help: If you would like the slider to slide automatically, without the visitor having to click the next button.
+
+    - name: autoplay_speed
+      type: text
+      label: Autoplay Speed 
+      value: 1000
+      help: Autoplay Speed in milliseconds
+      depends:
+        autoplay: true          
+
+  styles:
+    - name: global_style
+      type: divider 
+
+    - name: alignment
+      type: select
+      value: center
+      label: Text Alignment
+      options:
+        left: Left
+        center: Center
+        right: Right
+      image: true
+      responsive: true 
+
+    - name: image_style
+      type: select
+      value: square
+      lable: Image Style 
+      options:
+        img-square : Square
+        img-rounded: Rounded 
+        img-circle : Circle
+
+    - name: title_font
+      type: typography
+      depends:
+        enable_title_caption: true
+
+    - name: title_color
+      type: color
+      label: Text Color
+      depends:
+        enable_title_caption: true
+
+    - name: caption_font
+      type: typography
+      depends:
+        enable_title_caption: true
+
+    - name: caption_color
+      type: color
+      label: Text Color
+      depends:
+        enable_title_caption: true
+
+    - name: bg_color
+      type: color
+      label: Background Color
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+
+    - name: item_style
+      type: divider
+
+    - name: item_bg_color
+      type: color
+      label: Background Color
+
+    - name: item_padding
+      type: padding 
+      lable : Item Padding 
+
+    - name : box_shadow
+      type : switch
+      label : Enable Box Shadow   
+
+    - name : box_shadow_color
+      type : color 
+      label : Color 
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_blur
+      type : slider
+      label : Blur 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_spread
+      type : slider
+      label : Spread 
+      max : 200
+      suffix : px
+      depends:
+        box_shadow : true  
+
+    - name : box_shadow_horizontal
+      type : slider
+      label : Horizontal 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_vertical
+      type : slider
+      label : Vertical 
+      min : -250
+      max : 250
+      suffix : px
+      depends:
+        box_shadow : true 
+
+    - name : box_shadow_inset
+      type : switch 
+      label : Inset 
+      help : If specified, the shadows are drawn inside the frame.
+      depends:
+        box_shadow : true   
+        
+    - name: nav_style
+      type: divider
+
+    - name: nav_color
+      type: color
+      label: Navigation Arrow Color
+      depends:
+        arrows : true
+
+    - name: dots_nav_color
+      type: color
+      label: Dots Navigation Color
+      depends:
+        dots : true

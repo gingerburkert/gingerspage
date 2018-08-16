@@ -1,0 +1,381 @@
+name: Slider Pro
+slug: slider-pro
+groups: interactive
+form:
+  general:
+    - name: sliders 
+      type: group-repeater
+      schema:
+        - name: title
+          value: Slide Title
+
+        - name: hide_title
+          label: Hide Title
+          type: switch
+
+        - name: content
+          type: editor
+
+        - name: alignment
+          label : Horizontal Alignment
+          type: select
+          value: center
+          image: true 
+          options:
+            left: Left
+            center: Center
+            right: Right
+
+        - name: button_enabled
+          type : switch 
+          label: Enabled Button 
+
+        - name: button 
+          type: link
+          depends:
+            button_enabled: true
+
+        - name: image
+          type: file-manager
+          label: Background Image 
+          help: If defined, this image will be used as the background for this slide. To remove a background image, simply delete the URL from the settings field.
+
+        - name: image_position
+          type: select
+          label: Background Image Position 
+          value: initial
+          options:
+            initial: Default
+            center: Center
+            top left : Top Left 
+            top center : Top Center
+            top right: Top Right
+            center right: Center Right
+            center left: Center Left
+            bottom left: Bottom Left
+            bottom center: Bottom Center
+            bottom right: Bottom Right
+          depends:
+            image : '*'
+
+        - name : image_size
+          type : select
+          label : Background Image Size
+          value : initial
+          options :
+            initial : Default
+            cover : Cover 
+            contain : Contain 
+          depends:
+            image : '*'
+
+        - name: bg_color
+          type: color
+          lable: Background Color
+        
+        - name : bg_overlay
+          label: Background Overlay
+          type: switch
+        
+      value:
+        - title: Slide Title
+
+    - name: v_center
+      label : Vertica Center Text
+      type: switch
+      value: true
+      
+    - name : slider_height
+      type: select
+      value : custom
+      options:
+        custom : Custom Height 
+        full : Full Height 
+
+    - name : custom_height
+      type: slider 
+      max : 1000
+      step : 10
+      value: 400
+      suffix: px 
+      depends :
+        slider_height : custom
+
+    - name: utilities
+      type: divider 
+
+    - name: parallax_image
+      type: switch
+
+    - name: arrows
+      type: switch
+      value: true
+      help: This setting allows you to turn the navigation arrows on or off.
+
+    - name: dots
+      type: switch
+      label: Dots Navigation 
+      value: true
+      help: Disabling this option will remove the circle button at the bottom of the slider.
+
+    - name: autoplay
+      type: switch
+      labe: Auto Play
+      value: true
+      help: If you would like the slider to slide automatically, without the visitor having to click the next button.
+
+    - name: autoplay_speed
+      type: text
+      label: Autoplay Speed 
+      value: 5000
+      help: Autoplay Speed in milliseconds
+      depends:
+        autoplay: true
+
+  styles:
+
+    - name: title_styles
+      type: divider
+
+    - name: header_font
+      type: typography
+      label: Font 
+
+    - name: header_color
+      type: color 
+      label: Color
+
+    - name : header_margin
+      type: margin 
+      label: Margin
+
+    - name: header_span_note
+      type: divider 
+      label: Wrap words from title text with <span> will apply this styles. Eg - Hello <span>Beautiful</span> World.
+    
+    - name : header_span_font
+      type: typography
+      label: Span Font 
+
+    - name : header_span_color
+      type: color 
+      label: Span Color
+
+    - name : header_span_newline
+      type : switch
+      label: Span New Line
+
+    - name: content_styles
+      type: divider
+    
+    - name: body_font
+      type: typography
+      label: Font 
+    
+    - name: body_color
+      type: color
+      label: Color
+
+    - name: body_margin
+      type: margin
+      type: Margin
+
+    - name: button_styles
+      type: divider
+
+    - name: button_font
+      type: typography
+      label: Font 
+
+    - name: button_style
+      type: switch
+      label: Custom Style
+      help: Enable this for custom button style.
+
+    - name: button_bg
+      type: color 
+      label: Background Color 
+      depends:
+        button_style : true 
+
+    - name: button_text
+      type: color 
+      label: Text Color 
+      depends:
+        button_style : true 
+
+    - name: button_border_width
+      type: slider 
+      label: Border Width 
+      suffix: px
+      depends:
+        button_style : true 
+
+    - name: button_border_color
+      type: color 
+      label: Border Color 
+      depends:
+        button_style : true 
+
+    - name: button_border_radius
+      type: slider 
+      label: Border Radius 
+      suffix: px
+      depends:
+        button_style : true
+
+    - name: button_bg_hover
+      type: color 
+      label: Hover Background Color 
+      depends:
+        button_style : true 
+
+    - name: button_text_hover
+      type: color 
+      label: Hover Text Color 
+      depends:
+        button_style : true 
+
+    - name: button_border_color_hover
+      type: color 
+      label: Hover Border Color 
+      depends:
+        button_style : true 
+
+    - name : button_margin
+      type : margin
+      label: Margin
+
+    - name: misc_styles
+      type: divider
+
+    - name: arrow_color
+      type: color
+      label: Arrow Color
+      depends : 
+        arrows : true
+
+    - name: dots_color
+      type: color
+      label: Dots Nav Color
+      depends : 
+        dots : true
+
+    - name: global_style
+      type: divider
+
+    - name: margin
+      type: margin
+
+    - name: padding
+      type: padding
+
+  animation :
+
+    - name : slider_items_animation
+      type : divider 
+
+    - name: title_animation
+      type: select
+      help: Animation apply on slider title. Live example of all animations is here - bit.ly/quix-demo
+      value: fadeInDown
+      options:
+        0: None
+        fadeIn : Fade In
+        fadeInDown : Fade In Down
+        fadeInLeft : Fade In Left
+        fadeInRight : Fade In Right
+        fadeInUp : Fade In Up
+        bounceIn : Bounce In
+        bounceInDown : Bounce In Down
+        bounceInLeft : Bounce In Left
+        bounceInRight : Bounce In Right
+        bounceInUp : Bounce In Up
+        slideInUp : Slide In Up
+        slideInDown : Slide In Down
+        slideInLeft : Slide In Left
+        slideInRight : Slide In Right
+        rotateIn : Rotate In
+        rotateInDownLeft : Rotate In Down Left
+        rotateInDownRight : Rotate In Down Right
+        rotateInUpLeft : Rotate In Up Left
+        rotateInUpRight : Rotate In Up Right
+        zoomIn : Zoom In
+        zoomInDown : Zoom In Down
+        zoomInLeft : Zoom In Left
+        zoomInRight : Zoom In Right
+        zoomInUp : Zoom In Up
+        flipInX : Flip In X
+        flipInY : Flip In Y
+        lightSpeedIn : Light Speed In
+        rollIn : Roll In
+
+    - name: content_animation
+      type: select
+      help: Animation apply on slider content. Live example of all animations is here - bit.ly/quix-demo
+      value: fadeInDown
+      options:
+        0: None
+        fadeIn : Fade In
+        fadeInDown : Fade In Down
+        fadeInLeft : Fade In Left
+        fadeInRight : Fade In Right
+        fadeInUp : Fade In Up
+        bounceIn : Bounce In
+        bounceInDown : Bounce In Down
+        bounceInLeft : Bounce In Left
+        bounceInRight : Bounce In Right
+        bounceInUp : Bounce In Up
+        slideInUp : Slide In Up
+        slideInDown : Slide In Down
+        slideInLeft : Slide In Left
+        slideInRight : Slide In Right
+        rotateIn : Rotate In
+        rotateInDownLeft : Rotate In Down Left
+        rotateInDownRight : Rotate In Down Right
+        rotateInUpLeft : Rotate In Up Left
+        rotateInUpRight : Rotate In Up Right
+        zoomIn : Zoom In
+        zoomInDown : Zoom In Down
+        zoomInLeft : Zoom In Left
+        zoomInRight : Zoom In Right
+        zoomInUp : Zoom In Up
+        flipInX : Flip In X
+        flipInY : Flip In Y
+        lightSpeedIn : Light Speed In
+        rollIn : Roll In
+
+    - name: btn_animation
+      type: select
+      help: Animation apply on slider button. Live example of all animations is here - bit.ly/quix-demo
+      value: fadeInUp
+      options:
+        0: None
+        fadeIn : Fade In
+        fadeInDown : Fade In Down
+        fadeInLeft : Fade In Left
+        fadeInRight : Fade In Right
+        fadeInUp : Fade In Up
+        bounceIn : Bounce In
+        bounceInDown : Bounce In Down
+        bounceInLeft : Bounce In Left
+        bounceInRight : Bounce In Right
+        bounceInUp : Bounce In Up
+        slideInUp : Slide In Up
+        slideInDown : Slide In Down
+        slideInLeft : Slide In Left
+        slideInRight : Slide In Right
+        rotateIn : Rotate In
+        rotateInDownLeft : Rotate In Down Left
+        rotateInDownRight : Rotate In Down Right
+        rotateInUpLeft : Rotate In Up Left
+        rotateInUpRight : Rotate In Up Right
+        zoomIn : Zoom In
+        zoomInDown : Zoom In Down
+        zoomInLeft : Zoom In Left
+        zoomInRight : Zoom In Right
+        zoomInUp : Zoom In Up
+        flipInX : Flip In X
+        flipInY : Flip In Y
+        lightSpeedIn : Light Speed In
+        rollIn : Roll In
